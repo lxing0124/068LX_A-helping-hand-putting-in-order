@@ -1,0 +1,2092 @@
+Subject	Gender	Hand Posture	Trial	Interval 	CorrectResponse	Given Response	Accuacy	RT	Image
+201	female	Down	1	950	k	k	1	791	Ring Finger
+201	female	Down	2	800	h	h	1	575	Index
+201	female	Down	3	500	k	k	1	415	Ring Finger
+201	female	Down	4	1100	l	l	1	335	Little Finger
+201	female	Down	5	950	b	b	1	322	Thumb
+201	female	Down	6	500	h	h	1	415	Index
+201	female	Down	7	650	b	b	1	444	Thumb
+201	female	Down	8	1100	h	h	1	386	Index
+201	female	Down	9	1100	j	j	1	338	Middle Finger
+201	female	Down	10	500	b	b	1	562	Thumb
+201	female	Down	11	800	l	l	1	354	Little Finger
+201	female	Down	12	650	k	k	1	482	Ring Finger
+201	female	Down	13	950	l	l	1	370	Little Finger
+201	female	Down	14	1100	b	b	1	399	Thumb
+201	female	Down	15	650	k	k	1	487	Ring Finger
+201	female	Down	16	950	h	h	1	615	Index
+201	female	Down	17	650	j	j	1	324	Middle Finger
+201	female	Down	18	650	l	l	1	255	Little Finger
+201	female	Down	19	650	j	j	1	380	Middle Finger
+201	female	Down	20	800	h	h	1	434	Index
+201	female	Down	21	650	l	l	1	306	Little Finger
+201	female	Down	22	500	j	j	1	474	Middle Finger
+201	female	Down	23	950	h	h	1	327	Index
+201	female	Down	24	1100	l	l	1	396	Little Finger
+201	female	Down	25	800	j	j	1	482	Middle Finger
+201	female	Down	26	1100	b	b	1	399	Thumb
+201	female	Down	27	800	k	k	1	501	Ring Finger
+201	female	Down	28	800	j	j	1	489	Middle Finger
+201	female	Down	29	1100	h	h	1	286	Index
+201	female	Down	30	500	j	j	1	492	Middle Finger
+201	female	Down	31	950	k	k	1	276	Ring Finger
+201	female	Down	32	500	h	h	1	446	Index
+201	female	Down	33	500	l	l	1	332	Little Finger
+201	female	Down	34	1100	k	k	1	409	Ring Finger
+201	female	Down	35	650	b	b	1	436	Thumb
+201	female	Down	36	950	j	j	1	649	Middle Finger
+201	female	Down	37	500	b	b	1	430	Thumb
+201	female	Down	38	1100	k	k	1	433	Ring Finger
+201	female	Down	39	1100	j	j	1	476	Middle Finger
+201	female	Down	40	950	l	l	1	393	Little Finger
+201	female	Down	41	950	b	b	1	462	Thumb
+201	female	Down	42	500	k	k	1	646	Ring Finger
+201	female	Down	43	800	l	l	1	449	Little Finger
+201	female	Down	44	650	h	h	1	596	Index
+201	female	Down	45	800	b	b	1	449	Thumb
+201	female	Down	46	500	l	l	1	390	Little Finger
+201	female	Down	47	650	h	h	1	454	Index
+201	female	Down	48	950	j	j	1	329	Middle Finger
+201	female	Down	49	800	k	k	1	313	Ring Finger
+201	female	Down	50	800	b	b	1	409	Thumb
+201	female	Up	1	800	k	k	1	538	Ring Finger
+201	female	Up	2	650	h	h	1	423	Index
+201	female	Up	3	500	l	l	1	391	Little Finger
+201	female	Up	4	800	b	b	1	245	Thumb
+201	female	Up	5	800	l	l	1	509	Little Finger
+201	female	Up	6	500	k	j	0	447	Ring Finger
+201	female	Up	7	950	l	l	1	439	Little Finger
+201	female	Up	8	1100	j	j	1	426	Middle Finger
+201	female	Up	9	1100	k	k	1	506	Ring Finger
+201	female	Up	10	500	b	b	1	586	Thumb
+201	female	Up	11	500	l	l	1	434	Little Finger
+201	female	Up	12	650	h	h	1	346	Index
+201	female	Up	13	800	l	l	1	517	Little Finger
+201	female	Up	14	500	k	k	1	671	Ring Finger
+201	female	Up	15	950	b	b	1	461	Thumb
+201	female	Up	16	950	l	l	1	423	Little Finger
+201	female	Up	17	1100	j	j	1	583	Middle Finger
+201	female	Up	18	500	b	b	1	439	Thumb
+201	female	Up	19	500	h	h	1	586	Index
+201	female	Up	20	950	k	k	1	501	Ring Finger
+201	female	Up	21	500	j	j	1	1053	Middle Finger
+201	female	Up	22	1100	h	h	1	362	Index
+201	female	Up	23	800	j	j	1	637	Middle Finger
+201	female	Up	24	1100	b	b	1	440	Thumb
+201	female	Up	25	800	j	j	1	461	Middle Finger
+201	female	Up	26	1100	l	l	1	445	Little Finger
+201	female	Up	27	950	h	h	1	580	Index
+201	female	Up	28	500	j	j	1	764	Middle Finger
+201	female	Up	29	650	l	l	1	359	Little Finger
+201	female	Up	30	800	h	h	1	628	Index
+201	female	Up	31	650	j	j	1	740	Middle Finger
+201	female	Up	32	650	l	l	1	465	Little Finger
+201	female	Up	33	650	j	j	1	575	Middle Finger
+201	female	Up	34	950	h	h	1	545	Index
+201	female	Up	35	650	k	k	1	711	Ring Finger
+201	female	Up	36	1100	b	b	1	569	Thumb
+201	female	Up	37	650	k	k	1	388	Ring Finger
+201	female	Up	38	1100	h	h	1	327	Index
+201	female	Up	39	950	b	b	1	439	Thumb
+201	female	Up	40	1100	l	l	1	433	Little Finger
+201	female	Up	41	800	h	h	1	967	Index
+201	female	Up	42	950	k	k	1	583	Ring Finger
+201	female	Up	43	950	j	j	1	1145	Middle Finger
+201	female	Up	44	650	b	b	1	775	Thumb
+201	female	Up	45	1100	k	k	1	607	Ring Finger
+201	female	Up	46	800	b	b	1	391	Thumb
+201	female	Up	47	800	k	k	1	532	Ring Finger
+201	female	Up	48	500	h	h	1	513	Index
+201	female	Up	49	950	j	j	1	319	Middle Finger
+201	female	Up	50	650	b	b	1	415	Thumb
+203	female	Down	1	950	k	k	1	498	Ring Finger
+203	female	Down	2	800	h	h	1	527	Index
+203	female	Down	3	500	k	k	1	372	Ring Finger
+203	female	Down	4	1100	l	l	1	354	Little Finger
+203	female	Down	5	950	b	b	1	447	Thumb
+203	female	Down	6	500	h	h	1	636	Index
+203	female	Down	7	650	b	b	1	628	Thumb
+203	female	Down	8	1100	h	h	1	519	Index
+203	female	Down	9	1100	j	j	1	482	Middle Finger
+203	female	Down	10	500	b	b	1	495	Thumb
+203	female	Down	11	800	l	l	1	378	Little Finger
+203	female	Down	12	650	k	j	0	591	Ring Finger
+203	female	Down	13	950	l	l	1	453	Little Finger
+203	female	Down	14	1100	b	b	1	586	Thumb
+203	female	Down	15	650	k	k	1	367	Ring Finger
+203	female	Down	16	950	h	h	1	407	Index
+203	female	Down	17	650	j	j	1	490	Middle Finger
+203	female	Down	18	650	l	l	1	429	Little Finger
+203	female	Down	19	650	j	h	0	501	Middle Finger
+203	female	Down	20	800	h	h	1	490	Index
+203	female	Down	21	650	l	l	1	461	Little Finger
+203	female	Down	22	500	j	j	1	485	Middle Finger
+203	female	Down	23	950	h	h	1	405	Index
+203	female	Down	24	1100	l	l	1	426	Little Finger
+203	female	Down	25	800	j	j	1	373	Middle Finger
+203	female	Down	26	1100	b	b	1	434	Thumb
+203	female	Down	27	800	k	k	1	434	Ring Finger
+203	female	Down	28	800	j	j	1	586	Middle Finger
+203	female	Down	29	1100	h	h	1	394	Index
+203	female	Down	30	500	j	j	1	621	Middle Finger
+203	female	Down	31	950	k	k	1	615	Ring Finger
+203	female	Down	32	500	h	h	1	415	Index
+203	female	Down	33	500	l	l	1	415	Little Finger
+203	female	Down	34	1100	k	k	1	431	Ring Finger
+203	female	Down	35	650	b	b	1	831	Thumb
+203	female	Down	36	950	j	j	1	597	Middle Finger
+203	female	Down	37	500	b	b	1	719	Thumb
+203	female	Down	38	1100	k	k	1	682	Ring Finger
+203	female	Down	39	1100	j	j	1	534	Middle Finger
+203	female	Down	40	950	l	l	1	553	Little Finger
+203	female	Down	41	950	b	b	1	590	Thumb
+203	female	Down	42	500	k	k	1	689	Ring Finger
+203	female	Down	43	800	l	l	1	505	Little Finger
+203	female	Down	44	650	h	h	1	758	Index
+203	female	Down	45	800	b	b	1	636	Thumb
+203	female	Down	46	500	l	l	1	526	Little Finger
+203	female	Down	47	650	h	h	1	617	Index
+203	female	Down	48	950	j	j	1	556	Middle Finger
+203	female	Down	49	800	k	k	1	788	Ring Finger
+203	female	Down	50	800	b	b	1	892	Thumb
+203	female	Up	1	950	k	k	1	684	Ring Finger
+203	female	Up	2	800	h	h	1	342	Index
+203	female	Up	3	500	k	k	1	421	Ring Finger
+203	female	Up	4	1100	l	l	1	457	Little Finger
+203	female	Up	5	950	b	b	1	477	Thumb
+203	female	Up	6	500	h	h	1	391	Index
+203	female	Up	7	650	b	b	1	471	Thumb
+203	female	Up	8	1100	h	h	1	546	Index
+203	female	Up	9	1100	j	j	1	594	Middle Finger
+203	female	Up	10	500	b	b	1	525	Thumb
+203	female	Up	11	800	l	l	1	425	Little Finger
+203	female	Up	12	650	k	k	1	642	Ring Finger
+203	female	Up	13	950	l	l	1	610	Little Finger
+203	female	Up	14	1100	b	b	1	455	Thumb
+203	female	Up	15	650	k	k	1	645	Ring Finger
+203	female	Up	16	950	h	h	1	397	Index
+203	female	Up	18	650	l	l	1	429	Little Finger
+203	female	Up	19	650	j	j	1	493	Middle Finger
+203	female	Up	21	650	l	l	1	535	Little Finger
+203	female	Up	22	500	j	j	1	839	Middle Finger
+203	female	Up	23	950	h	h	1	357	Index
+203	female	Up	24	1100	l	l	1	416	Little Finger
+203	female	Up	25	800	j	j	1	477	Middle Finger
+203	female	Up	27	800	k	k	1	560	Ring Finger
+203	female	Up	28	800	j	j	1	509	Middle Finger
+203	female	Up	29	1100	h	h	1	360	Index
+203	female	Up	30	500	j	j	1	618	Middle Finger
+203	female	Up	31	950	k	k	1	397	Ring Finger
+203	female	Up	32	500	h	h	1	456	Index
+203	female	Up	33	500	l	l	1	600	Little Finger
+203	female	Up	34	1100	k	k	1	498	Ring Finger
+203	female	Up	35	650	b	b	1	496	Thumb
+203	female	Up	36	950	j	j	1	514	Middle Finger
+203	female	Up	37	500	b	b	1	493	Thumb
+203	female	Up	38	1100	k	k	1	506	Ring Finger
+203	female	Up	39	1100	j	j	1	546	Middle Finger
+203	female	Up	40	950	l	l	1	461	Little Finger
+203	female	Up	41	950	b	b	1	528	Thumb
+203	female	Up	42	500	k	k	1	541	Ring Finger
+203	female	Up	43	800	l	l	1	416	Little Finger
+203	female	Up	44	650	h	h	1	525	Index
+203	female	Up	45	800	b	b	1	445	Thumb
+203	female	Up	46	500	l	l	1	434	Little Finger
+203	female	Up	47	650	h	h	1	554	Index
+203	female	Up	48	950	j	j	1	608	Middle Finger
+203	female	Up	49	800	k	k	1	672	Ring Finger
+203	female	Up	50	800	b	b	1	1069	Thumb
+205	female	Down	1	950	k	k	1	522	Ring Finger
+205	female	Down	2	800	h	h	1	410	Index
+205	female	Down	3	500	k	k	1	495	Ring Finger
+205	female	Down	4	1100	l	l	1	447	Little Finger
+205	female	Down	5	950	b	b	1	431	Thumb
+205	female	Down	6	500	h	h	1	450	Index
+205	female	Down	7	650	b	b	1	453	Thumb
+205	female	Down	8	1100	h	h	1	474	Index
+205	female	Down	9	1100	j	j	1	453	Middle Finger
+205	female	Down	10	500	b	b	1	386	Thumb
+205	female	Down	11	800	l	l	1	413	Little Finger
+205	female	Down	12	650	k	k	1	519	Ring Finger
+205	female	Down	13	950	l	l	1	413	Little Finger
+205	female	Down	14	1100	b	b	1	370	Thumb
+205	female	Down	15	650	k	k	1	429	Ring Finger
+205	female	Down	16	950	h	h	1	450	Index
+205	female	Down	17	650	j	j	1	461	Middle Finger
+205	female	Down	18	650	l	l	1	530	Little Finger
+205	female	Down	19	650	j	j	1	461	Middle Finger
+205	female	Down	20	800	h	h	1	402	Index
+205	female	Down	21	650	l	l	1	437	Little Finger
+205	female	Down	22	500	j	j	1	375	Middle Finger
+205	female	Down	23	950	h	h	1	434	Index
+205	female	Down	24	1100	l	l	1	501	Little Finger
+205	female	Down	25	800	j	j	1	498	Middle Finger
+205	female	Down	26	1100	b	b	1	362	Thumb
+205	female	Down	27	800	k	k	1	533	Ring Finger
+205	female	Down	28	800	j	j	1	349	Middle Finger
+205	female	Down	29	1100	h	h	1	279	Index
+205	female	Down	30	500	j	j	1	522	Middle Finger
+205	female	Down	31	950	k	k	1	538	Ring Finger
+205	female	Down	32	500	h	h	1	418	Index
+205	female	Down	33	500	l	l	1	473	Little Finger
+205	female	Down	34	1100	k	k	1	484	Ring Finger
+205	female	Down	35	650	b	b	1	455	Thumb
+205	female	Down	36	950	j	j	1	513	Middle Finger
+205	female	Down	37	500	b	b	1	484	Thumb
+205	female	Down	38	1100	k	j	0	401	Ring Finger
+205	female	Down	39	1100	j	j	1	439	Middle Finger
+205	female	Down	40	950	l	l	1	540	Little Finger
+205	female	Down	41	950	b	b	1	423	Thumb
+205	female	Down	42	500	k	k	1	495	Ring Finger
+205	female	Down	43	800	l	l	1	452	Little Finger
+205	female	Down	44	650	h	h	1	391	Index
+205	female	Down	45	800	b	b	1	428	Thumb
+205	female	Down	46	500	l	l	1	367	Little Finger
+205	female	Down	47	650	h	h	1	577	Index
+205	female	Down	48	950	j	j	1	412	Middle Finger
+205	female	Down	49	800	k	j	0	380	Ring Finger
+205	female	Down	50	800	b	b	1	471	Thumb
+205	female	Up	1	800	k	k	1	481	Ring Finger
+205	female	Up	2	650	h	h	1	524	Index
+205	female	Up	3	500	l	l	1	441	Little Finger
+205	female	Up	4	800	b	b	1	393	Thumb
+205	female	Up	5	800	l	l	1	401	Little Finger
+205	female	Up	6	500	k	k	1	518	Ring Finger
+205	female	Up	7	950	l	l	1	364	Little Finger
+205	female	Up	8	1100	j	j	1	545	Middle Finger
+205	female	Up	9	1100	k	j	0	385	Ring Finger
+205	female	Up	10	500	b	b	1	393	Thumb
+205	female	Up	11	500	l	l	1	564	Little Finger
+205	female	Up	12	650	h	h	1	518	Index
+205	female	Up	13	800	l	l	1	460	Little Finger
+205	female	Up	14	500	k	k	1	348	Ring Finger
+205	female	Up	15	950	b	b	1	513	Thumb
+205	female	Up	16	950	l	l	1	470	Little Finger
+205	female	Up	17	1100	j	j	1	665	Middle Finger
+205	female	Up	18	500	b	b	1	521	Thumb
+205	female	Up	19	500	h	h	1	502	Index
+205	female	Up	20	950	k	k	1	369	Ring Finger
+205	female	Up	21	500	j	j	1	446	Middle Finger
+205	female	Up	22	1100	h	h	1	308	Index
+205	female	Up	23	800	j	j	1	452	Middle Finger
+205	female	Up	24	1100	b	b	1	441	Thumb
+205	female	Up	25	800	j	j	1	540	Middle Finger
+205	female	Up	26	1100	l	l	1	516	Little Finger
+205	female	Up	27	950	h	h	1	561	Index
+205	female	Up	28	500	j	j	1	583	Middle Finger
+205	female	Up	29	650	l	l	1	436	Little Finger
+205	female	Up	30	800	h	h	1	476	Index
+205	female	Up	31	650	j	j	1	372	Middle Finger
+205	female	Up	32	650	l	l	1	447	Little Finger
+205	female	Up	33	650	j	h	0	385	Middle Finger
+205	female	Up	34	950	h	h	1	428	Index
+205	female	Up	35	650	k	k	1	396	Ring Finger
+205	female	Up	36	1100	b	b	1	391	Thumb
+205	female	Up	37	650	k	k	1	479	Ring Finger
+205	female	Up	38	1100	h	h	1	481	Index
+205	female	Up	39	950	b	b	1	440	Thumb
+205	female	Up	40	1100	l	l	1	630	Little Finger
+205	female	Up	41	800	h	h	1	411	Index
+205	female	Up	42	950	k	k	1	355	Ring Finger
+205	female	Up	43	950	j	j	1	608	Middle Finger
+205	female	Up	44	650	b	b	1	371	Thumb
+205	female	Up	45	1100	k	k	1	400	Ring Finger
+205	female	Up	46	800	b	b	1	419	Thumb
+205	female	Up	47	800	k	k	1	510	Ring Finger
+205	female	Up	48	500	h	h	1	448	Index
+205	female	Up	49	950	j	j	1	312	Middle Finger
+205	female	Up	50	650	b	b	1	424	Thumb
+206	female	Down	1	950	k	k	1	460	Ring Finger
+206	female	Down	2	800	h	h	1	359	Index
+206	female	Down	3	500	k	k	1	546	Ring Finger
+206	female	Down	4	1100	l	l	1	322	Little Finger
+206	female	Down	5	950	b	b	1	386	Thumb
+206	female	Down	6	500	h	h	1	386	Index
+206	female	Down	7	650	b	b	1	431	Thumb
+206	female	Down	8	1100	h	h	1	378	Index
+206	female	Down	9	1100	j	j	1	442	Middle Finger
+206	female	Down	10	500	b	b	1	439	Thumb
+206	female	Down	11	800	l	l	1	367	Little Finger
+206	female	Down	12	650	k	k	1	402	Ring Finger
+206	female	Down	13	950	l	l	1	426	Little Finger
+206	female	Down	14	1100	b	b	1	426	Thumb
+206	female	Down	15	650	k	k	1	503	Ring Finger
+206	female	Down	16	950	h	h	1	338	Index
+206	female	Down	17	650	j	j	1	327	Middle Finger
+206	female	Down	18	650	l	l	1	346	Little Finger
+206	female	Down	19	650	j	j	1	431	Middle Finger
+206	female	Down	20	800	h	h	1	279	Index
+206	female	Down	21	650	l	l	1	391	Little Finger
+206	female	Down	22	500	j	j	1	426	Middle Finger
+206	female	Down	23	950	h	h	1	596	Index
+206	female	Down	24	1100	l	l	1	511	Little Finger
+206	female	Down	25	800	j	j	1	399	Middle Finger
+206	female	Down	26	1100	b	b	1	338	Thumb
+206	female	Down	27	800	k	k	1	415	Ring Finger
+206	female	Down	28	800	j	j	1	378	Middle Finger
+206	female	Down	29	1100	h	h	1	306	Index
+206	female	Down	30	500	j	j	1	442	Middle Finger
+206	female	Down	31	950	k	k	1	498	Ring Finger
+206	female	Down	32	500	h	h	1	353	Index
+206	female	Down	33	500	l	l	1	387	Little Finger
+206	female	Down	34	1100	k	k	1	414	Ring Finger
+206	female	Down	35	650	b	b	1	371	Thumb
+206	female	Down	36	950	j	j	1	420	Middle Finger
+206	female	Down	37	500	b	b	1	372	Thumb
+206	female	Down	38	1100	k	k	1	377	Ring Finger
+206	female	Down	39	1100	j	j	1	393	Middle Finger
+206	female	Down	40	950	l	l	1	334	Little Finger
+206	female	Down	41	950	b	b	1	393	Thumb
+206	female	Down	42	500	k	k	1	452	Ring Finger
+206	female	Down	43	800	l	l	1	388	Little Finger
+206	female	Down	44	650	h	h	1	372	Index
+206	female	Down	45	800	b	b	1	332	Thumb
+206	female	Down	46	500	l	l	1	409	Little Finger
+206	female	Down	47	650	h	h	1	468	Index
+206	female	Down	48	950	j	j	1	297	Middle Finger
+206	female	Down	49	800	k	k	1	316	Ring Finger
+206	female	Down	50	800	b	b	1	353	Thumb
+206	female	Up	1	950	k	k	1	469	Ring Finger
+206	female	Up	2	800	h	h	1	377	Index
+206	female	Up	3	500	k	k	1	572	Ring Finger
+206	female	Up	4	1100	l	l	1	331	Little Finger
+206	female	Up	5	950	b	b	1	423	Thumb
+206	female	Up	6	500	h	h	1	365	Index
+206	female	Up	7	650	b	b	1	440	Thumb
+206	female	Up	8	1100	h	h	1	572	Index
+206	female	Up	9	1100	j	j	1	596	Middle Finger
+206	female	Up	10	500	b	b	1	448	Thumb
+206	female	Up	11	800	l	l	1	432	Little Finger
+206	female	Up	12	650	k	k	1	428	Ring Finger
+206	female	Up	13	950	l	l	1	486	Little Finger
+206	female	Up	14	1100	b	b	1	435	Thumb
+206	female	Up	15	650	k	k	1	532	Ring Finger
+206	female	Up	16	950	h	h	1	356	Index
+206	female	Up	17	650	j	j	1	429	Middle Finger
+206	female	Up	18	650	l	l	1	355	Little Finger
+206	female	Up	19	650	j	j	1	632	Middle Finger
+206	female	Up	20	800	h	h	1	316	Index
+206	female	Up	21	650	l	l	1	421	Little Finger
+206	female	Up	22	500	j	j	1	444	Middle Finger
+206	female	Up	23	950	h	h	1	495	Index
+206	female	Up	24	1100	l	l	1	523	Little Finger
+206	female	Up	25	800	j	j	1	425	Middle Finger
+206	female	Up	26	1100	b	b	1	356	Thumb
+206	female	Up	27	800	k	k	1	555	Ring Finger
+206	female	Up	28	800	j	j	1	396	Middle Finger
+206	female	Up	29	1100	h	h	1	347	Index
+206	female	Up	30	500	j	j	1	479	Middle Finger
+206	female	Up	31	950	k	k	1	460	Ring Finger
+206	female	Up	32	500	h	h	1	478	Index
+206	female	Up	33	500	l	l	1	413	Little Finger
+206	female	Up	34	1100	k	k	1	432	Ring Finger
+206	female	Up	35	650	b	b	1	387	Thumb
+206	female	Up	37	500	b	b	1	454	Thumb
+206	female	Up	38	1100	k	k	1	390	Ring Finger
+206	female	Up	39	1100	j	j	1	414	Middle Finger
+206	female	Up	40	950	l	l	1	390	Little Finger
+206	female	Up	41	950	b	b	1	352	Thumb
+206	female	Up	42	500	k	k	1	419	Ring Finger
+206	female	Up	43	800	l	l	1	460	Little Finger
+206	female	Up	45	800	b	b	1	401	Thumb
+206	female	Up	46	500	l	l	1	387	Little Finger
+206	female	Up	47	650	h	h	1	365	Index
+206	female	Up	48	950	j	j	1	407	Middle Finger
+206	female	Up	49	800	k	k	1	505	Ring Finger
+206	female	Up	50	800	b	b	1	297	Thumb
+207	male	Down	1	950	k	k	1	316	Ring Finger
+207	male	Down	2	800	h	h	1	353	Index
+207	male	Down	3	500	k	k	1	489	Ring Finger
+207	male	Down	4	1100	l	l	1	302	Little Finger
+207	male	Down	5	950	b	b	1	289	Thumb
+207	male	Down	6	500	h	h	1	342	Index
+207	male	Down	7	650	b	b	1	340	Thumb
+207	male	Down	8	1100	h	h	1	340	Index
+207	male	Down	9	1100	j	j	1	340	Middle Finger
+207	male	Down	10	500	b	b	1	324	Thumb
+207	male	Down	11	800	l	l	1	308	Little Finger
+207	male	Down	12	650	k	k	1	292	Ring Finger
+207	male	Down	13	950	l	l	1	372	Little Finger
+207	male	Down	14	1100	b	b	1	288	Thumb
+207	male	Down	15	650	k	k	1	355	Ring Finger
+207	male	Down	16	950	h	h	1	272	Index
+207	male	Down	17	650	j	j	1	304	Middle Finger
+207	male	Down	18	650	l	l	1	309	Little Finger
+207	male	Down	19	650	j	j	1	333	Middle Finger
+207	male	Down	20	800	h	h	1	371	Index
+207	male	Down	21	650	l	l	1	333	Little Finger
+207	male	Down	22	500	j	j	1	301	Middle Finger
+207	male	Down	23	950	h	h	1	320	Index
+207	male	Down	24	1100	l	l	1	485	Little Finger
+207	male	Down	25	800	j	j	1	288	Middle Finger
+207	male	Down	26	1100	b	b	1	285	Thumb
+207	male	Down	27	800	k	k	1	336	Ring Finger
+207	male	Down	28	800	j	j	1	298	Middle Finger
+207	male	Down	29	1100	h	h	1	291	Index
+207	male	Down	30	500	j	j	1	312	Middle Finger
+207	male	Down	31	950	k	j	0	501	Ring Finger
+207	male	Down	32	500	h	h	1	461	Index
+207	male	Down	33	500	l	l	1	341	Little Finger
+207	male	Down	34	1100	k	k	1	398	Ring Finger
+207	male	Down	35	650	b	b	1	390	Thumb
+207	male	Down	36	950	j	j	1	267	Middle Finger
+207	male	Down	37	500	b	b	1	358	Thumb
+207	male	Down	38	1100	k	k	1	344	Ring Finger
+207	male	Down	39	1100	j	h	0	280	Middle Finger
+207	male	Down	40	950	l	l	1	376	Little Finger
+207	male	Down	41	950	b	b	1	355	Thumb
+207	male	Down	42	500	k	k	1	422	Ring Finger
+207	male	Down	43	800	l	l	1	403	Little Finger
+207	male	Down	44	650	h	h	1	374	Index
+207	male	Down	45	800	b	b	1	411	Thumb
+207	male	Down	46	500	l	l	1	344	Little Finger
+207	male	Down	47	650	h	h	1	390	Index
+207	male	Down	48	950	j	j	1	371	Middle Finger
+207	male	Down	49	800	k	k	1	290	Ring Finger
+207	male	Down	50	800	b	b	1	307	Thumb
+207	male	Up	1	800	k	k	1	608	Ring Finger
+207	male	Up	2	650	h	h	1	331	Index
+207	male	Up	3	500	l	l	1	328	Little Finger
+207	male	Up	4	800	b	b	1	315	Thumb
+207	male	Up	5	800	l	l	1	362	Little Finger
+207	male	Up	6	500	k	k	1	559	Ring Finger
+207	male	Up	7	950	l	l	1	404	Little Finger
+207	male	Up	8	1100	j	j	1	394	Middle Finger
+207	male	Up	9	1100	k	k	1	484	Ring Finger
+207	male	Up	10	500	b	b	1	330	Thumb
+207	male	Up	11	500	l	l	1	335	Little Finger
+207	male	Up	12	650	h	h	1	357	Index
+207	male	Up	13	800	l	l	1	306	Little Finger
+207	male	Up	14	500	k	k	1	386	Ring Finger
+207	male	Up	15	950	b	b	1	341	Thumb
+207	male	Up	16	950	l	l	1	359	Little Finger
+207	male	Up	17	1100	j	j	1	346	Middle Finger
+207	male	Up	18	500	b	b	1	354	Thumb
+207	male	Up	19	500	h	h	1	389	Index
+207	male	Up	20	950	k	k	1	434	Ring Finger
+207	male	Up	21	500	j	j	1	381	Middle Finger
+207	male	Up	22	1100	h	h	1	341	Index
+207	male	Up	23	800	j	j	1	498	Middle Finger
+207	male	Up	24	1100	b	b	1	386	Thumb
+207	male	Up	25	800	j	j	1	357	Middle Finger
+207	male	Up	26	1100	l	l	1	383	Little Finger
+207	male	Up	27	950	h	h	1	290	Index
+207	male	Up	28	500	j	h	0	327	Middle Finger
+207	male	Up	29	650	l	l	1	386	Little Finger
+207	male	Up	30	800	h	h	1	341	Index
+207	male	Up	31	650	j	j	1	362	Middle Finger
+207	male	Up	32	650	l	l	1	485	Little Finger
+207	male	Up	33	650	j	j	1	359	Middle Finger
+207	male	Up	34	950	h	h	1	309	Index
+207	male	Up	35	650	k	j	0	509	Ring Finger
+207	male	Up	36	1100	b	b	1	399	Thumb
+207	male	Up	37	650	k	k	1	407	Ring Finger
+207	male	Up	38	1100	h	h	1	349	Index
+207	male	Up	39	950	b	b	1	394	Thumb
+207	male	Up	40	1100	l	l	1	397	Little Finger
+207	male	Up	41	800	h	h	1	346	Index
+207	male	Up	42	950	k	k	1	357	Ring Finger
+207	male	Up	43	950	j	j	1	322	Middle Finger
+207	male	Up	44	650	b	b	1	357	Thumb
+207	male	Up	45	1100	k	j	0	455	Ring Finger
+207	male	Up	46	800	b	b	1	357	Thumb
+207	male	Up	47	800	k	k	1	333	Ring Finger
+207	male	Up	48	500	h	h	1	346	Index
+207	male	Up	49	950	j	j	1	317	Middle Finger
+207	male	Up	50	650	b	b	1	389	Thumb
+208	male	Down	1	950	k	k	1	418	Ring Finger
+208	male	Down	2	800	h	h	1	309	Index
+208	male	Down	3	500	k	k	1	408	Ring Finger
+208	male	Down	4	1100	l	l	1	309	Little Finger
+208	male	Down	5	950	b	b	1	386	Thumb
+208	male	Down	6	500	h	h	1	394	Index
+208	male	Down	7	650	b	b	1	362	Thumb
+208	male	Down	8	1100	h	h	1	328	Index
+208	male	Down	9	1100	j	j	1	269	Middle Finger
+208	male	Down	10	500	b	b	1	456	Thumb
+208	male	Down	11	800	l	k	0	397	Little Finger
+208	male	Down	12	650	k	k	1	765	Ring Finger
+208	male	Down	13	950	l	l	1	309	Little Finger
+208	male	Down	14	1100	b	h	0	376	Thumb
+208	male	Down	15	650	k	k	1	477	Ring Finger
+208	male	Down	16	950	h	h	1	498	Index
+208	male	Down	17	650	j	j	1	640	Middle Finger
+208	male	Down	18	650	l	l	1	784	Little Finger
+208	male	Down	19	650	j	j	1	525	Middle Finger
+208	male	Down	20	800	h	h	1	501	Index
+208	male	Down	21	650	l	l	1	658	Little Finger
+208	male	Down	22	500	j	j	1	474	Middle Finger
+208	male	Down	23	950	h	h	1	320	Index
+208	male	Down	24	1100	l	l	1	426	Little Finger
+208	male	Down	25	800	j	j	1	400	Middle Finger
+208	male	Down	26	1100	b	b	1	434	Thumb
+208	male	Down	27	800	k	k	1	408	Ring Finger
+208	male	Down	28	800	j	j	1	352	Middle Finger
+208	male	Down	29	1100	h	h	1	306	Index
+208	male	Down	30	500	j	j	1	458	Middle Finger
+208	male	Down	31	950	k	k	1	341	Ring Finger
+208	male	Down	32	500	h	h	1	453	Index
+208	male	Down	33	500	l	l	1	434	Little Finger
+208	male	Down	34	1100	k	k	1	389	Ring Finger
+208	male	Down	35	650	b	b	1	453	Thumb
+208	male	Down	36	950	j	j	1	389	Middle Finger
+208	male	Down	37	500	b	b	1	448	Thumb
+208	male	Down	38	1100	k	k	1	533	Ring Finger
+208	male	Down	39	1100	j	j	1	499	Middle Finger
+208	male	Down	40	950	l	l	1	405	Little Finger
+208	male	Down	41	950	b	b	1	437	Thumb
+208	male	Down	42	500	k	k	1	432	Ring Finger
+208	male	Down	43	800	l	l	1	384	Little Finger
+208	male	Down	44	650	h	h	1	389	Index
+208	male	Down	45	800	b	b	1	411	Thumb
+208	male	Down	46	500	l	l	1	416	Little Finger
+208	male	Down	47	650	h	h	1	349	Index
+208	male	Down	48	950	j	j	1	563	Middle Finger
+208	male	Down	49	800	k	k	1	410	Ring Finger
+208	male	Down	50	800	b	b	1	410	Thumb
+208	male	Up	1	800	k	k	1	521	Ring Finger
+208	male	Up	2	650	h	h	1	483	Index
+208	male	Up	3	500	l	l	1	577	Little Finger
+208	male	Up	4	800	b	b	1	478	Thumb
+208	male	Up	5	800	l	l	1	830	Little Finger
+208	male	Up	6	500	k	k	1	585	Ring Finger
+208	male	Up	7	950	l	l	1	611	Little Finger
+208	male	Up	8	1100	j	j	1	449	Middle Finger
+208	male	Up	9	1100	k	k	1	870	Ring Finger
+208	male	Up	10	500	b	b	1	505	Thumb
+208	male	Up	11	500	l	l	1	465	Little Finger
+208	male	Up	12	650	h	h	1	566	Index
+208	male	Up	13	800	l	l	1	513	Little Finger
+208	male	Up	14	500	k	k	1	540	Ring Finger
+208	male	Up	15	950	b	b	1	446	Thumb
+208	male	Up	16	950	l	l	1	502	Little Finger
+208	male	Up	17	1100	j	j	1	414	Middle Finger
+208	male	Up	18	500	b	b	1	494	Thumb
+208	male	Up	19	500	h	h	1	398	Index
+208	male	Up	20	950	k	k	1	468	Ring Finger
+208	male	Up	21	500	j	j	1	454	Middle Finger
+208	male	Up	22	1100	h	h	1	278	Index
+208	male	Up	23	800	j	j	1	484	Middle Finger
+208	male	Up	24	1100	b	b	1	497	Thumb
+208	male	Up	25	800	j	j	1	388	Middle Finger
+208	male	Up	26	1100	l	l	1	414	Little Finger
+208	male	Up	27	950	h	h	1	417	Index
+208	male	Up	28	500	j	j	1	449	Middle Finger
+208	male	Up	29	650	l	l	1	548	Little Finger
+208	male	Up	30	800	h	h	1	633	Index
+208	male	Up	31	650	j	j	1	393	Middle Finger
+208	male	Up	32	650	l	l	1	553	Little Finger
+208	male	Up	33	650	j	j	1	377	Middle Finger
+208	male	Up	34	950	h	h	1	596	Index
+208	male	Up	35	650	k	k	1	452	Ring Finger
+208	male	Up	36	1100	b	b	1	609	Thumb
+208	male	Up	37	650	k	k	1	468	Ring Finger
+208	male	Up	38	1100	h	h	1	326	Index
+208	male	Up	39	950	b	b	1	558	Thumb
+208	male	Up	40	1100	l	l	1	369	Little Finger
+208	male	Up	41	800	h	h	1	481	Index
+208	male	Up	42	950	k	k	1	345	Ring Finger
+208	male	Up	43	950	j	j	1	484	Middle Finger
+208	male	Up	44	650	b	b	1	374	Thumb
+208	male	Up	45	1100	k	k	1	589	Ring Finger
+208	male	Up	46	800	b	b	1	643	Thumb
+208	male	Up	47	800	k	k	1	555	Ring Finger
+208	male	Up	48	500	h	h	1	461	Index
+208	male	Up	49	950	j	j	1	464	Middle Finger
+208	male	Up	50	650	b	b	1	453	Thumb
+209	female	Down	1	950	k	k	1	445	Ring Finger
+209	female	Down	2	800	h	h	1	348	Index
+209	female	Down	3	500	k	k	1	360	Ring Finger
+209	female	Down	4	1100	l	l	1	330	Little Finger
+209	female	Down	5	950	b	b	1	346	Thumb
+209	female	Down	6	500	h	h	1	346	Index
+209	female	Down	7	650	b	b	1	392	Thumb
+209	female	Down	8	1100	h	h	1	346	Index
+209	female	Down	9	1100	j	j	1	322	Middle Finger
+209	female	Down	10	500	b	b	1	424	Thumb
+209	female	Down	11	800	l	l	1	341	Little Finger
+209	female	Down	12	650	k	k	1	426	Ring Finger
+209	female	Down	13	950	l	l	1	349	Little Finger
+209	female	Down	14	1100	b	b	1	352	Thumb
+209	female	Down	15	650	k	k	1	408	Ring Finger
+209	female	Down	16	950	h	h	1	336	Index
+209	female	Down	17	650	j	j	1	373	Middle Finger
+209	female	Down	18	650	l	l	1	359	Little Finger
+209	female	Down	19	650	j	k	0	327	Middle Finger
+209	female	Down	20	800	h	h	1	391	Index
+209	female	Down	21	650	l	l	1	415	Little Finger
+209	female	Down	22	500	j	j	1	423	Middle Finger
+209	female	Down	23	950	h	h	1	409	Index
+209	female	Down	24	1100	l	l	1	455	Little Finger
+209	female	Down	25	800	j	j	1	396	Middle Finger
+209	female	Down	26	1100	b	b	1	495	Thumb
+209	female	Down	27	800	k	k	1	396	Ring Finger
+209	female	Down	28	800	j	j	1	364	Middle Finger
+209	female	Down	29	1100	h	h	1	465	Index
+209	female	Down	30	500	j	j	1	505	Middle Finger
+209	female	Down	31	950	k	k	1	436	Ring Finger
+209	female	Down	32	500	h	h	1	551	Index
+209	female	Down	33	500	l	l	1	425	Little Finger
+209	female	Down	34	1100	k	k	1	697	Ring Finger
+209	female	Down	35	650	b	b	1	415	Thumb
+209	female	Down	36	950	j	j	1	401	Middle Finger
+209	female	Down	37	500	b	b	1	479	Thumb
+209	female	Down	38	1100	k	k	1	441	Ring Finger
+209	female	Down	39	1100	j	j	1	399	Middle Finger
+209	female	Down	40	950	l	l	1	372	Little Finger
+209	female	Down	41	950	b	b	1	444	Thumb
+209	female	Down	42	500	k	k	1	417	Ring Finger
+209	female	Down	43	800	l	l	1	391	Little Finger
+209	female	Down	44	650	h	h	1	375	Index
+209	female	Down	45	800	b	b	1	412	Thumb
+209	female	Down	46	500	l	l	1	385	Little Finger
+209	female	Down	47	650	h	h	1	359	Index
+209	female	Down	48	950	j	j	1	348	Middle Finger
+209	female	Down	49	800	k	k	1	394	Ring Finger
+209	female	Down	50	800	b	b	1	375	Thumb
+209	female	Up	1	800	k	k	1	461	Ring Finger
+209	female	Up	2	650	h	h	1	386	Index
+209	female	Up	3	500	l	l	1	418	Little Finger
+209	female	Up	4	800	b	b	1	325	Thumb
+209	female	Up	5	800	l	l	1	381	Little Finger
+209	female	Up	6	500	k	k	1	389	Ring Finger
+209	female	Up	7	950	l	l	1	386	Little Finger
+209	female	Up	8	1100	j	j	1	354	Middle Finger
+209	female	Up	9	1100	k	k	1	349	Ring Finger
+209	female	Up	10	500	b	b	1	408	Thumb
+209	female	Up	11	500	l	l	1	349	Little Finger
+209	female	Up	12	650	h	h	1	325	Index
+209	female	Up	13	800	l	l	1	400	Little Finger
+209	female	Up	14	500	k	k	1	321	Ring Finger
+209	female	Up	15	950	b	b	1	257	Thumb
+209	female	Up	16	950	l	l	1	324	Little Finger
+209	female	Up	17	1100	j	j	1	281	Middle Finger
+209	female	Up	18	500	b	b	1	383	Thumb
+209	female	Up	19	500	h	h	1	399	Index
+209	female	Up	20	950	k	k	1	556	Ring Finger
+209	female	Up	21	500	j	j	1	359	Middle Finger
+209	female	Up	22	1100	h	h	1	322	Index
+209	female	Up	23	800	j	j	1	314	Middle Finger
+209	female	Up	24	1100	b	b	1	340	Thumb
+209	female	Up	25	800	j	j	1	351	Middle Finger
+209	female	Up	26	1100	l	l	1	322	Little Finger
+209	female	Up	27	950	h	h	1	314	Index
+209	female	Up	28	500	j	j	1	340	Middle Finger
+209	female	Up	29	650	l	l	1	354	Little Finger
+209	female	Up	30	800	h	h	1	343	Index
+209	female	Up	31	650	j	j	1	324	Middle Finger
+209	female	Up	32	650	l	l	1	359	Little Finger
+209	female	Up	33	650	j	j	1	287	Middle Finger
+209	female	Up	34	950	h	h	1	295	Index
+209	female	Up	35	650	k	k	1	324	Ring Finger
+209	female	Up	36	1100	b	b	1	314	Thumb
+209	female	Up	37	650	k	k	1	378	Ring Finger
+209	female	Up	38	1100	h	h	1	290	Index
+209	female	Up	39	950	b	b	1	402	Thumb
+209	female	Up	40	1100	l	l	1	367	Little Finger
+209	female	Up	41	800	h	h	1	351	Index
+209	female	Up	42	950	k	k	1	396	Ring Finger
+209	female	Up	43	950	j	j	1	362	Middle Finger
+209	female	Up	44	650	b	b	1	356	Thumb
+209	female	Up	45	1100	k	k	1	343	Ring Finger
+209	female	Up	46	800	b	b	1	418	Thumb
+209	female	Up	47	800	k	k	1	399	Ring Finger
+209	female	Up	48	500	h	h	1	330	Index
+209	female	Up	49	950	j	j	1	386	Middle Finger
+209	female	Up	50	650	b	b	1	359	Thumb
+210	female	Down	1	950	k	k	1	680	Ring Finger
+210	female	Down	2	800	h	h	1	342	Index
+210	female	Down	3	500	k	k	1	421	Ring Finger
+210	female	Down	4	1100	l	l	1	453	Little Finger
+210	female	Down	5	950	b	b	1	477	Thumb
+210	female	Down	6	500	h	h	1	391	Index
+210	female	Down	7	650	b	b	1	471	Thumb
+210	female	Down	8	1100	h	h	1	546	Index
+210	female	Down	9	1100	j	j	1	594	Middle Finger
+210	female	Down	10	500	b	b	1	525	Thumb
+210	female	Down	11	800	l	l	1	421	Little Finger
+210	female	Down	12	650	k	k	1	642	Ring Finger
+210	female	Down	13	950	l	l	1	610	Little Finger
+210	female	Down	14	1100	b	b	1	455	Thumb
+210	female	Down	15	650	k	k	1	645	Ring Finger
+210	female	Down	16	950	h	h	1	397	Index
+210	female	Down	17	650	j	j	1	397	Middle Finger
+210	female	Down	18	650	l	l	1	429	Little Finger
+210	female	Down	19	650	j	j	1	493	Middle Finger
+210	female	Down	20	800	h	h	1	405	Index
+210	female	Down	21	650	l	l	1	535	Little Finger
+210	female	Down	22	500	j	j	1	839	Middle Finger
+210	female	Down	23	950	h	h	1	357	Index
+210	female	Down	24	1100	l	l	1	416	Little Finger
+210	female	Down	25	800	j	j	1	477	Middle Finger
+210	female	Down	26	1100	b	b	1	568	Thumb
+210	female	Down	27	800	k	k	1	560	Ring Finger
+210	female	Down	28	800	j	j	1	509	Middle Finger
+210	female	Down	29	1100	h	h	1	360	Index
+210	female	Down	30	500	j	j	1	618	Middle Finger
+210	female	Down	31	950	k	k	1	397	Ring Finger
+210	female	Down	32	500	h	h	1	456	Index
+210	female	Down	33	500	l	l	1	600	Little Finger
+210	female	Down	34	1100	k	k	1	498	Ring Finger
+210	female	Down	35	650	b	b	1	496	Thumb
+210	female	Down	36	950	j	j	1	514	Middle Finger
+210	female	Down	37	500	b	b	1	493	Thumb
+210	female	Down	38	1100	k	k	1	506	Ring Finger
+210	female	Down	39	1100	j	j	1	546	Middle Finger
+210	female	Down	40	950	l	l	1	461	Little Finger
+210	female	Down	41	950	b	b	1	528	Thumb
+210	female	Down	42	500	k	k	1	541	Ring Finger
+210	female	Down	43	800	l	l	1	416	Little Finger
+210	female	Down	44	650	h	h	1	525	Index
+210	female	Down	45	800	b	b	1	445	Thumb
+210	female	Down	46	500	l	l	1	434	Little Finger
+210	female	Down	47	650	h	h	1	554	Index
+210	female	Down	48	950	j	j	1	608	Middle Finger
+210	female	Down	49	800	k	k	1	672	Ring Finger
+210	female	Down	50	800	b	b	1	1069	Thumb
+210	female	Up	1	950	k	k	1	445	Ring Finger
+210	female	Up	2	800	h	h	1	348	Index
+210	female	Up	3	500	k	k	1	360	Ring Finger
+210	female	Up	4	1100	l	l	1	330	Little Finger
+210	female	Up	5	950	b	b	1	346	Thumb
+210	female	Up	6	500	h	h	1	346	Index
+210	female	Up	7	650	b	b	1	392	Thumb
+210	female	Up	8	1100	h	h	1	346	Index
+210	female	Up	9	1100	j	j	1	322	Middle Finger
+210	female	Up	10	500	b	b	1	424	Thumb
+210	female	Up	11	800	l	l	1	341	Little Finger
+210	female	Up	12	650	k	k	1	426	Ring Finger
+210	female	Up	13	950	l	l	1	349	Little Finger
+210	female	Up	14	1100	b	b	1	352	Thumb
+210	female	Up	15	650	k	k	1	408	Ring Finger
+210	female	Up	16	950	h	h	1	336	Index
+210	female	Up	17	650	j	j	1	373	Middle Finger
+210	female	Up	18	650	l	l	1	359	Little Finger
+210	female	Up	19	650	j	k	0	327	Middle Finger
+210	female	Up	20	800	h	h	1	391	Index
+210	female	Up	21	650	l	l	1	415	Little Finger
+210	female	Up	22	500	j	j	1	423	Middle Finger
+210	female	Up	23	950	h	h	1	411	Index
+210	female	Up	24	1100	l	l	1	458	Little Finger
+210	female	Up	26	1100	b	b	1	495	Thumb
+210	female	Up	27	800	k	k	1	396	Ring Finger
+210	female	Up	28	800	j	j	1	364	Middle Finger
+210	female	Up	29	1100	h	h	1	465	Index
+210	female	Up	30	500	j	j	1	505	Middle Finger
+210	female	Up	31	950	k	k	1	436	Ring Finger
+210	female	Up	32	500	h	h	1	555	Index
+210	female	Up	33	500	l	l	1	427	Little Finger
+210	female	Up	34	1100	k	k	1	698	Ring Finger
+210	female	Up	35	650	b	b	1	415	Thumb
+210	female	Up	36	950	j	j	1	401	Middle Finger
+210	female	Up	38	1100	k	k	1	441	Ring Finger
+210	female	Up	39	1100	j	j	1	399	Middle Finger
+210	female	Up	40	950	l	l	1	372	Little Finger
+210	female	Up	41	950	b	b	1	444	Thumb
+210	female	Up	42	500	k	k	1	417	Ring Finger
+210	female	Up	43	800	l	l	1	391	Little Finger
+210	female	Up	44	650	h	h	1	375	Index
+210	female	Up	45	800	b	b	1	412	Thumb
+210	female	Up	46	500	l	l	1	385	Little Finger
+210	female	Up	47	650	h	h	1	359	Index
+210	female	Up	48	950	j	j	1	348	Middle Finger
+210	female	Up	49	800	k	k	1	394	Ring Finger
+210	female	Up	50	800	b	b	1	375	Thumb
+211	female	Down	1	950	k	k	1	586	Ring Finger
+211	female	Down	2	800	h	h	1	285	Index
+211	female	Down	3	500	k	k	1	362	Ring Finger
+211	female	Down	4	1100	l	l	1	392	Little Finger
+211	female	Down	5	950	b	b	1	405	Thumb
+211	female	Down	6	500	h	h	1	386	Index
+211	female	Down	7	650	b	b	1	480	Thumb
+211	female	Down	8	1100	h	h	1	322	Index
+211	female	Down	9	1100	j	j	1	344	Middle Finger
+211	female	Down	10	500	b	b	1	472	Thumb
+211	female	Down	11	800	l	l	1	376	Little Finger
+211	female	Down	12	650	k	k	1	373	Ring Finger
+211	female	Down	13	950	l	l	1	549	Little Finger
+211	female	Down	14	1100	b	b	1	432	Thumb
+211	female	Down	15	650	k	k	1	344	Ring Finger
+211	female	Down	16	950	h	h	1	450	Index
+211	female	Down	17	650	j	j	1	277	Middle Finger
+211	female	Down	18	650	l	l	1	365	Little Finger
+211	female	Down	19	650	j	j	1	280	Middle Finger
+211	female	Down	20	800	h	h	1	304	Index
+211	female	Down	21	650	l	l	1	549	Little Finger
+211	female	Down	22	500	j	j	1	416	Middle Finger
+211	female	Down	23	950	h	h	1	283	Index
+211	female	Down	24	1100	l	l	1	432	Little Finger
+211	female	Down	25	800	j	j	1	552	Middle Finger
+211	female	Down	26	1100	b	b	1	339	Thumb
+211	female	Down	27	800	k	k	1	472	Ring Finger
+211	female	Down	28	800	j	j	1	304	Middle Finger
+211	female	Down	29	1100	h	h	1	320	Index
+211	female	Down	30	500	j	j	1	459	Middle Finger
+211	female	Down	31	950	k	k	1	277	Ring Finger
+211	female	Down	32	500	h	h	1	376	Index
+211	female	Down	33	500	l	l	1	392	Little Finger
+211	female	Down	34	1100	k	k	1	411	Ring Finger
+211	female	Down	35	650	b	b	1	397	Thumb
+211	female	Down	36	950	j	j	1	1139	Middle Finger
+211	female	Down	37	500	b	b	1	595	Thumb
+211	female	Down	38	1100	k	k	1	461	Ring Finger
+211	female	Down	39	1100	j	j	1	413	Middle Finger
+211	female	Down	40	950	l	l	1	349	Little Finger
+211	female	Down	41	950	b	b	1	435	Thumb
+211	female	Down	42	500	k	k	1	453	Ring Finger
+211	female	Down	43	800	l	l	1	424	Little Finger
+211	female	Down	44	650	h	h	1	341	Index
+211	female	Down	45	800	b	b	1	480	Thumb
+211	female	Down	46	500	l	l	1	419	Little Finger
+211	female	Down	47	650	h	h	1	416	Index
+211	female	Down	48	950	j	j	1	667	Middle Finger
+211	female	Down	49	800	k	k	1	392	Ring Finger
+211	female	Down	50	800	b	b	1	464	Thumb
+211	female	Up	1	800	k	k	1	753	Ring Finger
+211	female	Up	2	650	h	h	1	425	Index
+211	female	Up	3	500	l	l	1	481	Little Finger
+211	female	Up	4	800	b	b	1	441	Thumb
+211	female	Up	5	800	l	l	1	417	Little Finger
+211	female	Up	6	500	k	k	1	441	Ring Finger
+211	female	Up	7	950	l	l	1	441	Little Finger
+211	female	Up	8	1100	j	j	1	462	Middle Finger
+211	female	Up	9	1100	k	k	1	486	Ring Finger
+211	female	Up	10	500	b	b	1	540	Thumb
+211	female	Up	11	500	l	l	1	420	Little Finger
+211	female	Up	12	650	h	h	1	481	Index
+211	female	Up	13	800	l	l	1	457	Little Finger
+211	female	Up	14	500	k	k	1	401	Ring Finger
+211	female	Up	15	950	b	b	1	425	Thumb
+211	female	Up	16	950	l	l	1	380	Little Finger
+211	female	Up	17	1100	j	j	1	508	Middle Finger
+211	female	Up	18	500	b	b	1	470	Thumb
+211	female	Up	19	500	h	h	1	433	Index
+211	female	Up	20	950	k	k	1	326	Ring Finger
+211	female	Up	21	500	j	j	1	308	Middle Finger
+211	female	Up	22	1100	h	h	1	414	Index
+211	female	Up	23	800	j	j	1	496	Middle Finger
+211	female	Up	24	1100	b	b	1	376	Thumb
+211	female	Up	25	800	j	j	1	475	Middle Finger
+211	female	Up	26	1100	l	l	1	653	Little Finger
+211	female	Up	27	950	h	h	1	392	Index
+211	female	Up	28	500	j	j	1	507	Middle Finger
+211	female	Up	29	650	l	l	1	491	Little Finger
+211	female	Up	30	800	h	h	1	403	Index
+211	female	Up	31	650	j	j	1	445	Middle Finger
+211	female	Up	32	650	l	l	1	432	Little Finger
+211	female	Up	33	650	j	j	1	416	Middle Finger
+211	female	Up	34	950	h	h	1	315	Index
+211	female	Up	35	650	k	j	0	499	Ring Finger
+211	female	Up	36	1100	b	b	1	635	Thumb
+211	female	Up	37	650	k	k	1	755	Ring Finger
+211	female	Up	38	1100	h	h	1	501	Index
+211	female	Up	39	950	b	b	1	528	Thumb
+211	female	Up	40	1100	l	l	1	493	Little Finger
+211	female	Up	41	800	h	h	1	435	Index
+211	female	Up	42	950	k	k	1	488	Ring Finger
+211	female	Up	43	950	j	j	1	512	Middle Finger
+211	female	Up	44	650	b	b	1	520	Thumb
+211	female	Up	45	1100	k	k	1	502	Ring Finger
+211	female	Up	46	800	b	b	1	435	Thumb
+211	female	Up	47	800	k	k	1	507	Ring Finger
+211	female	Up	48	500	h	h	1	430	Index
+211	female	Up	49	950	j	j	1	331	Middle Finger
+211	female	Up	50	650	b	b	1	550	Thumb
+212	female	Down	1	950	k	k	1	840	Ring Finger
+212	female	Down	2	800	h	h	1	525	Index
+212	female	Down	3	500	k	k	1	554	Ring Finger
+212	female	Down	4	1100	l	l	1	397	Little Finger
+212	female	Down	5	950	b	b	1	482	Thumb
+212	female	Down	6	500	h	h	1	544	Index
+212	female	Down	7	650	b	b	1	477	Thumb
+212	female	Down	8	1100	h	h	1	512	Index
+212	female	Down	9	1100	j	j	1	546	Middle Finger
+212	female	Down	10	500	b	b	1	530	Thumb
+212	female	Down	11	800	l	l	1	453	Little Finger
+212	female	Down	12	650	k	k	1	464	Ring Finger
+212	female	Down	13	950	l	l	1	426	Little Finger
+212	female	Down	14	1100	b	b	1	554	Thumb
+212	female	Down	15	650	k	k	1	682	Ring Finger
+212	female	Down	16	950	h	h	1	554	Index
+212	female	Down	17	650	j	j	1	426	Middle Finger
+212	female	Down	18	650	l	l	1	480	Little Finger
+212	female	Down	19	650	j	j	1	504	Middle Finger
+212	female	Down	20	800	h	h	1	341	Index
+212	female	Down	21	650	l	l	1	426	Little Finger
+212	female	Down	22	500	j	j	1	490	Middle Finger
+212	female	Down	23	950	h	h	1	394	Index
+212	female	Down	24	1100	l	l	1	405	Little Finger
+212	female	Down	25	800	j	j	1	469	Middle Finger
+212	female	Down	26	1100	b	b	1	552	Thumb
+212	female	Down	27	800	k	k	1	688	Ring Finger
+212	female	Down	28	800	j	j	1	448	Middle Finger
+212	female	Down	29	1100	h	h	1	421	Index
+212	female	Down	30	500	j	j	1	493	Middle Finger
+212	female	Down	31	950	k	k	1	557	Ring Finger
+212	female	Down	32	500	h	h	1	472	Index
+212	female	Down	33	500	l	l	1	418	Little Finger
+212	female	Down	34	1100	k	k	1	522	Ring Finger
+212	female	Down	35	650	b	b	1	461	Thumb
+212	female	Down	36	950	j	j	1	496	Middle Finger
+212	female	Down	37	500	b	b	1	552	Thumb
+212	female	Down	38	1100	k	k	1	562	Ring Finger
+212	female	Down	39	1100	j	j	1	480	Middle Finger
+212	female	Down	40	950	l	l	1	429	Little Finger
+212	female	Down	41	950	b	b	1	547	Thumb
+212	female	Down	42	500	k	k	1	515	Ring Finger
+212	female	Down	43	800	l	l	1	400	Little Finger
+212	female	Down	44	650	h	h	1	432	Index
+212	female	Down	45	800	b	b	1	552	Thumb
+212	female	Down	46	500	l	l	1	419	Little Finger
+212	female	Down	47	650	h	h	1	456	Index
+212	female	Down	48	950	j	j	1	387	Middle Finger
+212	female	Down	49	800	k	k	1	456	Ring Finger
+212	female	Down	50	800	b	b	1	339	Thumb
+212	female	Up	1	800	k	k	1	643	Ring Finger
+212	female	Up	2	650	h	h	1	445	Index
+212	female	Up	3	500	l	l	1	523	Little Finger
+212	female	Up	4	800	b	b	1	451	Thumb
+212	female	Up	5	800	l	l	1	499	Little Finger
+212	female	Up	6	500	k	k	1	483	Ring Finger
+212	female	Up	7	950	l	l	1	507	Little Finger
+212	female	Up	8	1100	j	j	1	453	Middle Finger
+212	female	Up	9	1100	k	k	1	589	Ring Finger
+212	female	Up	10	500	b	b	1	472	Thumb
+212	female	Up	11	500	l	l	1	531	Little Finger
+212	female	Up	12	650	h	h	1	445	Index
+212	female	Up	13	800	l	l	1	488	Little Finger
+212	female	Up	14	500	k	k	1	477	Ring Finger
+212	female	Up	15	950	b	b	1	459	Thumb
+212	female	Up	16	950	l	l	1	541	Little Finger
+212	female	Up	17	1100	j	j	1	461	Middle Finger
+212	female	Up	18	500	b	b	1	509	Thumb
+212	female	Up	19	500	h	h	1	464	Index
+212	female	Up	20	950	k	k	1	555	Ring Finger
+212	female	Up	21	500	j	j	1	429	Middle Finger
+212	female	Up	22	1100	h	h	1	424	Index
+212	female	Up	23	800	j	j	1	515	Middle Finger
+212	female	Up	24	1100	b	b	1	445	Thumb
+212	female	Up	25	800	j	j	1	446	Middle Finger
+212	female	Up	26	1100	l	l	1	523	Little Finger
+212	female	Up	27	950	h	h	1	411	Index
+212	female	Up	28	500	j	j	1	504	Middle Finger
+212	female	Up	29	650	l	l	1	494	Little Finger
+212	female	Up	30	800	h	h	1	406	Index
+212	female	Up	31	650	j	j	1	424	Middle Finger
+212	female	Up	32	650	l	l	1	606	Little Finger
+212	female	Up	33	650	j	j	1	464	Middle Finger
+212	female	Up	34	950	h	h	1	443	Index
+212	female	Up	35	650	k	k	1	590	Ring Finger
+212	female	Up	36	1100	b	b	1	480	Thumb
+212	female	Up	37	650	k	k	1	568	Ring Finger
+212	female	Up	38	1100	h	h	1	478	Index
+212	female	Up	39	950	b	b	1	539	Thumb
+212	female	Up	40	1100	l	l	1	539	Little Finger
+212	female	Up	41	800	h	h	1	438	Index
+212	female	Up	42	950	k	k	1	579	Ring Finger
+212	female	Up	43	950	j	j	1	470	Middle Finger
+212	female	Up	44	650	b	b	1	486	Thumb
+212	female	Up	45	1100	k	k	1	523	Ring Finger
+212	female	Up	46	800	b	b	1	514	Thumb
+212	female	Up	47	800	k	k	1	546	Ring Finger
+212	female	Up	48	500	h	h	1	546	Index
+212	female	Up	49	950	j	j	1	389	Middle Finger
+212	female	Up	50	650	b	b	1	469	Thumb
+213	male	Down	1	950	k	k	1	351	Ring Finger
+213	male	Down	2	800	h	h	1	279	Index
+213	male	Down	3	500	k	k	1	346	Ring Finger
+213	male	Down	4	1100	l	l	1	306	Little Finger
+213	male	Down	5	950	b	b	1	356	Thumb
+213	male	Down	6	500	h	h	1	335	Index
+213	male	Down	7	650	b	b	1	396	Thumb
+213	male	Down	8	1100	h	h	1	375	Index
+213	male	Down	9	1100	j	j	1	359	Middle Finger
+213	male	Down	10	500	b	b	1	370	Thumb
+213	male	Down	11	800	l	l	1	306	Little Finger
+213	male	Down	12	650	k	k	1	431	Ring Finger
+213	male	Down	13	950	l	l	1	372	Little Finger
+213	male	Down	14	1100	b	b	1	418	Thumb
+213	male	Down	15	650	k	k	1	431	Ring Finger
+213	male	Down	16	950	h	h	1	308	Index
+213	male	Down	17	650	j	j	1	340	Middle Finger
+213	male	Down	18	650	l	l	1	298	Little Finger
+213	male	Down	19	650	j	j	1	319	Middle Finger
+213	male	Down	20	800	h	h	1	383	Index
+213	male	Down	21	650	l	l	1	396	Little Finger
+213	male	Down	22	500	j	j	1	303	Middle Finger
+213	male	Down	23	950	h	h	1	370	Index
+213	male	Down	24	1100	l	l	1	399	Little Finger
+213	male	Down	25	800	j	j	1	303	Middle Finger
+213	male	Down	26	1100	b	b	1	383	Thumb
+213	male	Down	27	800	k	k	1	322	Ring Finger
+213	male	Down	28	800	j	j	1	274	Middle Finger
+213	male	Down	29	1100	h	h	1	324	Index
+213	male	Down	30	500	j	j	1	362	Middle Finger
+213	male	Down	31	950	k	k	1	434	Ring Finger
+213	male	Down	32	500	h	h	1	332	Index
+213	male	Down	33	500	l	l	1	330	Little Finger
+213	male	Down	34	1100	k	k	1	359	Ring Finger
+213	male	Down	35	650	b	b	1	351	Thumb
+213	male	Down	36	950	j	j	1	380	Middle Finger
+213	male	Down	37	500	b	b	1	373	Thumb
+213	male	Down	38	1100	k	k	1	306	Ring Finger
+213	male	Down	39	1100	j	j	1	266	Middle Finger
+213	male	Down	40	950	l	l	1	269	Little Finger
+213	male	Down	41	950	b	b	1	362	Thumb
+213	male	Down	42	500	k	k	1	359	Ring Finger
+213	male	Down	43	800	l	l	1	357	Little Finger
+213	male	Down	44	650	h	h	1	317	Index
+213	male	Down	45	800	b	b	1	378	Thumb
+213	male	Down	46	500	l	l	1	346	Little Finger
+213	male	Down	47	650	h	h	1	319	Index
+213	male	Down	48	950	j	j	1	301	Middle Finger
+213	male	Down	49	800	k	k	1	354	Ring Finger
+213	male	Down	50	800	b	b	1	314	Thumb
+213	male	Up	1	800	k	k	1	393	Ring Finger
+213	male	Up	2	650	h	h	1	329	Index
+213	male	Up	3	500	l	l	1	342	Little Finger
+213	male	Up	4	800	b	b	1	296	Thumb
+213	male	Up	5	800	l	l	1	350	Little Finger
+213	male	Up	6	500	k	k	1	401	Ring Finger
+213	male	Up	7	950	l	l	1	353	Little Finger
+213	male	Up	8	1100	j	j	1	387	Middle Finger
+213	male	Up	9	1100	k	k	1	382	Ring Finger
+213	male	Up	10	500	b	b	1	374	Thumb
+213	male	Up	11	500	l	l	1	294	Little Finger
+213	male	Up	12	650	h	h	1	323	Index
+213	male	Up	13	800	l	l	1	318	Little Finger
+213	male	Up	14	500	k	k	1	296	Ring Finger
+213	male	Up	15	950	b	b	1	378	Thumb
+213	male	Up	16	950	l	l	1	325	Little Finger
+213	male	Up	17	1100	j	j	1	387	Middle Finger
+213	male	Up	18	500	b	b	1	365	Thumb
+213	male	Up	19	500	h	h	1	315	Index
+213	male	Up	20	950	k	k	1	304	Ring Finger
+213	male	Up	21	500	j	j	1	344	Middle Finger
+213	male	Up	22	1100	h	h	1	328	Index
+213	male	Up	23	800	j	j	1	384	Middle Finger
+213	male	Up	24	1100	b	b	1	320	Thumb
+213	male	Up	25	800	j	j	1	367	Middle Finger
+213	male	Up	26	1100	l	l	1	285	Little Finger
+213	male	Up	27	950	h	h	1	349	Index
+213	male	Up	28	500	j	j	1	480	Middle Finger
+213	male	Up	29	650	l	l	1	675	Little Finger
+213	male	Up	30	800	h	h	1	344	Index
+213	male	Up	31	650	j	j	1	309	Middle Finger
+213	male	Up	32	650	l	l	1	293	Little Finger
+213	male	Up	33	650	j	j	1	320	Middle Finger
+213	male	Up	34	950	h	h	1	357	Index
+213	male	Up	35	650	k	k	1	581	Ring Finger
+213	male	Up	36	1100	b	b	1	357	Thumb
+213	male	Up	37	650	k	k	1	421	Ring Finger
+213	male	Up	38	1100	h	h	1	349	Index
+213	male	Up	39	950	b	b	1	363	Thumb
+213	male	Up	40	1100	l	l	1	296	Little Finger
+213	male	Up	41	800	h	h	1	323	Index
+213	male	Up	42	950	k	k	1	387	Ring Finger
+213	male	Up	43	950	j	j	1	365	Middle Finger
+213	male	Up	44	650	b	b	1	360	Thumb
+213	male	Up	45	1100	k	k	1	347	Ring Finger
+213	male	Up	46	800	b	b	1	360	Thumb
+213	male	Up	47	800	k	k	1	408	Ring Finger
+213	male	Up	48	500	h	h	1	365	Index
+213	male	Up	49	950	j	j	1	325	Middle Finger
+213	male	Up	50	650	b	b	1	376	Thumb
+214	female	Down	1	950	k	k	1	515	Ring Finger
+214	female	Down	2	800	h	h	1	409	Index
+214	female	Down	3	500	k	k	1	398	Ring Finger
+214	female	Down	4	1100	l	l	1	313	Little Finger
+214	female	Down	5	950	b	b	1	558	Thumb
+214	female	Down	6	500	h	h	1	489	Index
+214	female	Down	7	650	b	b	1	436	Thumb
+214	female	Down	8	1100	h	h	1	430	Index
+214	female	Down	9	1100	j	j	1	505	Middle Finger
+214	female	Down	10	500	b	b	1	472	Thumb
+214	female	Down	11	800	l	l	1	400	Little Finger
+214	female	Down	12	650	k	k	1	435	Ring Finger
+214	female	Down	13	950	l	l	1	376	Little Finger
+214	female	Down	14	1100	b	b	1	488	Thumb
+214	female	Down	15	650	k	k	1	451	Ring Finger
+214	female	Down	16	950	h	h	1	323	Index
+214	female	Down	17	650	j	j	1	429	Middle Finger
+214	female	Down	18	650	l	l	1	413	Little Finger
+214	female	Down	19	650	j	j	1	419	Middle Finger
+214	female	Down	20	800	h	h	1	456	Index
+214	female	Down	21	650	l	l	1	437	Little Finger
+214	female	Down	22	500	j	j	1	520	Middle Finger
+214	female	Down	23	950	h	h	1	304	Index
+214	female	Down	24	1100	l	l	1	496	Little Finger
+214	female	Down	25	800	j	j	1	603	Middle Finger
+214	female	Down	26	1100	b	b	1	520	Thumb
+214	female	Down	27	800	k	k	1	768	Ring Finger
+214	female	Down	28	800	j	j	1	456	Middle Finger
+214	female	Down	29	1100	h	h	1	472	Index
+214	female	Down	30	500	j	j	1	515	Middle Finger
+214	female	Down	31	950	k	k	1	520	Ring Finger
+214	female	Down	32	500	h	h	1	411	Index
+214	female	Down	33	500	l	l	1	368	Little Finger
+214	female	Down	34	1100	k	k	1	437	Ring Finger
+214	female	Down	35	650	b	b	1	581	Thumb
+214	female	Down	36	950	j	j	1	496	Middle Finger
+214	female	Down	37	500	b	b	1	448	Thumb
+214	female	Down	38	1100	k	k	1	469	Ring Finger
+214	female	Down	39	1100	j	j	1	480	Middle Finger
+214	female	Down	40	950	l	l	1	429	Little Finger
+214	female	Down	41	950	b	b	1	363	Thumb
+214	female	Down	42	500	k	k	1	392	Ring Finger
+214	female	Down	43	800	l	l	1	344	Little Finger
+214	female	Down	44	650	h	h	1	325	Index
+214	female	Down	45	800	b	b	1	344	Thumb
+214	female	Down	46	500	l	l	1	352	Little Finger
+214	female	Down	47	650	h	h	1	400	Index
+214	female	Down	48	950	j	j	1	478	Middle Finger
+214	female	Down	49	800	k	k	1	355	Ring Finger
+214	female	Down	50	800	b	b	1	587	Thumb
+214	female	Up	1	800	k	k	1	516	Ring Finger
+214	female	Up	2	650	h	h	1	364	Index
+214	female	Up	3	500	l	l	1	457	Little Finger
+214	female	Up	4	800	b	b	1	436	Thumb
+214	female	Up	5	800	l	l	1	433	Little Finger
+214	female	Up	6	500	k	k	1	508	Ring Finger
+214	female	Up	7	950	l	l	1	433	Little Finger
+214	female	Up	8	1100	j	j	1	428	Middle Finger
+214	female	Up	9	1100	k	k	1	550	Ring Finger
+214	female	Up	10	500	b	b	1	417	Thumb
+214	female	Up	11	500	l	l	1	953	Little Finger
+214	female	Up	12	650	h	h	1	441	Index
+214	female	Up	13	800	l	l	1	353	Little Finger
+214	female	Up	14	500	k	k	1	476	Ring Finger
+214	female	Up	15	950	b	b	1	521	Thumb
+214	female	Up	16	950	l	l	1	393	Little Finger
+214	female	Up	17	1100	j	j	1	612	Middle Finger
+214	female	Up	18	500	b	b	1	449	Thumb
+214	female	Up	19	500	h	h	1	406	Index
+214	female	Up	20	950	k	k	1	334	Ring Finger
+214	female	Up	21	500	j	j	1	486	Middle Finger
+214	female	Up	22	1100	h	h	1	452	Index
+214	female	Up	23	800	j	j	1	428	Middle Finger
+214	female	Up	24	1100	b	b	1	494	Thumb
+214	female	Up	25	800	j	j	1	441	Middle Finger
+214	female	Up	26	1100	l	l	1	646	Little Finger
+214	female	Up	27	950	h	h	1	438	Index
+214	female	Up	28	500	j	j	1	537	Middle Finger
+214	female	Up	29	650	l	l	1	414	Little Finger
+214	female	Up	30	800	h	h	1	489	Index
+214	female	Up	31	650	j	j	1	588	Middle Finger
+214	female	Up	32	650	l	l	1	484	Little Finger
+214	female	Up	33	650	j	j	1	582	Middle Finger
+214	female	Up	34	950	h	h	1	473	Index
+214	female	Up	35	650	k	k	1	497	Ring Finger
+214	female	Up	36	1100	b	b	1	385	Thumb
+214	female	Up	37	650	k	k	1	470	Ring Finger
+214	female	Up	38	1100	h	h	1	465	Index
+214	female	Up	39	950	b	b	1	372	Thumb
+214	female	Up	40	1100	l	l	1	465	Little Finger
+214	female	Up	41	800	h	h	1	572	Index
+214	female	Up	42	950	k	k	1	532	Ring Finger
+214	female	Up	43	950	j	j	1	468	Middle Finger
+214	female	Up	44	650	b	b	1	444	Thumb
+214	female	Up	45	1100	k	k	1	617	Ring Finger
+214	female	Up	46	800	b	b	1	411	Thumb
+214	female	Up	47	800	k	k	1	539	Ring Finger
+214	female	Up	48	500	h	h	1	507	Index
+214	female	Up	49	950	j	j	1	488	Middle Finger
+214	female	Up	50	650	b	b	1	459	Thumb
+215	female	Down	1	950	k	k	1	562	Ring Finger
+215	female	Down	2	800	h	h	1	490	Index
+215	female	Down	3	500	k	k	1	407	Ring Finger
+215	female	Down	4	1100	l	l	1	621	Little Finger
+215	female	Down	5	950	b	b	1	423	Thumb
+215	female	Down	6	500	h	h	1	463	Index
+215	female	Down	7	650	b	b	1	389	Thumb
+215	female	Down	8	1100	h	h	1	487	Index
+215	female	Down	9	1100	j	j	1	485	Middle Finger
+215	female	Down	10	500	b	b	1	538	Thumb
+215	female	Down	11	800	l	l	1	517	Little Finger
+215	female	Down	12	650	k	k	1	709	Ring Finger
+215	female	Down	13	950	l	l	1	554	Little Finger
+215	female	Down	14	1100	b	b	1	485	Thumb
+215	female	Down	15	650	k	k	1	567	Ring Finger
+215	female	Down	16	950	h	h	1	687	Index
+215	female	Down	17	650	j	j	1	506	Middle Finger
+215	female	Down	18	650	l	l	1	455	Little Finger
+215	female	Down	19	650	j	j	1	477	Middle Finger
+215	female	Down	20	800	h	h	1	565	Index
+215	female	Down	21	650	l	l	1	496	Little Finger
+215	female	Down	22	500	j	j	1	464	Middle Finger
+215	female	Down	23	950	h	h	1	722	Index
+215	female	Down	24	1100	l	l	1	408	Little Finger
+215	female	Down	25	800	j	j	1	504	Middle Finger
+215	female	Down	26	1100	b	b	1	384	Thumb
+215	female	Down	27	800	k	k	1	581	Ring Finger
+215	female	Down	28	800	j	j	1	536	Middle Finger
+215	female	Down	29	1100	h	h	1	464	Index
+215	female	Down	30	500	j	j	1	504	Middle Finger
+215	female	Down	31	950	k	k	1	570	Ring Finger
+215	female	Down	32	500	h	h	1	416	Index
+215	female	Down	33	500	l	l	1	552	Little Finger
+215	female	Down	34	1100	k	k	1	770	Ring Finger
+215	female	Down	35	650	b	b	1	492	Thumb
+215	female	Down	36	950	j	j	1	541	Middle Finger
+215	female	Down	37	500	b	b	1	556	Thumb
+215	female	Down	38	1100	k	k	1	487	Ring Finger
+215	female	Down	39	1100	j	j	1	468	Middle Finger
+215	female	Down	40	950	l	l	1	561	Little Finger
+215	female	Down	41	950	b	b	1	577	Thumb
+215	female	Down	42	500	k	k	1	601	Ring Finger
+215	female	Down	43	800	l	l	1	2412	Little Finger
+215	female	Down	44	650	h	h	1	687	Index
+215	female	Down	45	800	b	b	1	551	Thumb
+215	female	Down	46	500	l	l	1	521	Little Finger
+215	female	Down	47	650	h	h	1	524	Index
+215	female	Down	48	950	j	j	1	516	Middle Finger
+215	female	Down	49	800	k	k	1	468	Ring Finger
+215	female	Down	50	800	b	b	1	500	Thumb
+215	female	Up	1	800	k	k	1	575	Ring Finger
+215	female	Up	2	650	h	h	1	372	Index
+215	female	Up	3	500	l	l	1	513	Little Finger
+215	female	Up	4	800	b	b	1	351	Thumb
+215	female	Up	5	800	l	l	1	519	Little Finger
+215	female	Up	6	500	k	k	1	809	Ring Finger
+215	female	Up	7	950	l	l	1	530	Little Finger
+215	female	Up	8	1100	j	j	1	535	Middle Finger
+215	female	Up	9	1100	k	k	1	527	Ring Finger
+215	female	Up	10	500	b	b	1	412	Thumb
+215	female	Up	11	500	l	l	1	530	Little Finger
+215	female	Up	12	650	h	h	1	460	Index
+215	female	Up	13	800	l	l	1	511	Little Finger
+215	female	Up	14	500	k	k	1	762	Ring Finger
+215	female	Up	15	950	b	b	1	426	Thumb
+215	female	Up	16	950	l	l	1	556	Little Finger
+215	female	Up	17	1100	j	j	1	479	Middle Finger
+215	female	Up	18	500	b	b	1	386	Thumb
+215	female	Up	19	500	h	h	1	482	Index
+215	female	Up	20	950	k	k	1	554	Ring Finger
+215	female	Up	21	500	j	j	1	516	Middle Finger
+215	female	Up	22	1100	h	h	1	455	Index
+215	female	Up	23	800	j	j	1	466	Middle Finger
+215	female	Up	24	1100	b	b	1	394	Thumb
+215	female	Up	25	800	j	k	0	591	Middle Finger
+215	female	Up	26	1100	l	l	1	642	Little Finger
+215	female	Up	27	950	h	h	1	594	Index
+215	female	Up	28	500	j	j	1	900	Middle Finger
+215	female	Up	29	650	l	l	1	1378	Little Finger
+215	female	Up	30	800	h	h	1	487	Index
+215	female	Up	31	650	j	j	1	594	Middle Finger
+215	female	Up	32	650	l	l	1	538	Little Finger
+215	female	Up	33	650	j	j	1	606	Middle Finger
+215	female	Up	34	950	h	h	1	510	Index
+215	female	Up	35	650	k	k	1	750	Ring Finger
+215	female	Up	36	1100	b	b	1	441	Thumb
+215	female	Up	37	650	k	k	1	547	Ring Finger
+215	female	Up	38	1100	h	h	1	590	Index
+215	female	Up	39	950	b	b	1	427	Thumb
+215	female	Up	40	1100	l	l	1	486	Little Finger
+215	female	Up	41	800	h	h	1	513	Index
+215	female	Up	42	950	k	k	1	558	Ring Finger
+215	female	Up	43	950	j	j	1	459	Middle Finger
+215	female	Up	44	650	b	b	1	377	Thumb
+215	female	Up	45	1100	k	k	1	729	Ring Finger
+215	female	Up	46	800	b	b	1	369	Thumb
+215	female	Up	47	800	k	k	1	577	Ring Finger
+215	female	Up	48	500	h	h	1	545	Index
+215	female	Up	49	950	j	j	1	1203	Middle Finger
+215	female	Up	50	650	b	b	1	430	Thumb
+216	female	Down	1	950	k	k	1	441	Ring Finger
+216	female	Down	2	800	h	h	1	364	Index
+216	female	Down	3	500	k	l	0	369	Ring Finger
+216	female	Down	4	1100	l	l	1	383	Little Finger
+216	female	Down	5	950	b	b	1	465	Thumb
+216	female	Down	6	500	h	h	1	465	Index
+216	female	Down	7	650	b	b	1	495	Thumb
+216	female	Down	8	1100	h	h	1	367	Index
+216	female	Down	9	1100	j	j	1	636	Middle Finger
+216	female	Down	10	500	b	b	1	615	Thumb
+216	female	Down	11	800	l	l	1	420	Little Finger
+216	female	Down	12	650	k	k	1	321	Ring Finger
+216	female	Down	13	950	l	l	1	393	Little Finger
+216	female	Down	14	1100	b	b	1	452	Thumb
+216	female	Down	15	650	k	k	1	447	Ring Finger
+216	female	Down	16	950	h	h	1	343	Index
+216	female	Down	17	650	j	j	1	340	Middle Finger
+216	female	Down	18	650	l	l	1	385	Little Finger
+216	female	Down	19	650	j	j	1	567	Middle Finger
+216	female	Down	20	800	h	h	1	407	Index
+216	female	Down	21	650	l	l	1	433	Little Finger
+216	female	Down	22	500	j	j	1	388	Middle Finger
+216	female	Down	23	950	h	h	1	466	Index
+216	female	Down	24	1100	l	l	1	394	Little Finger
+216	female	Down	25	800	j	j	1	391	Middle Finger
+216	female	Down	26	1100	b	b	1	410	Thumb
+216	female	Down	27	800	k	k	1	434	Ring Finger
+216	female	Down	28	800	j	j	1	319	Middle Finger
+216	female	Down	29	1100	h	h	1	282	Index
+216	female	Down	30	500	j	j	1	671	Middle Finger
+216	female	Down	31	950	k	k	1	404	Ring Finger
+216	female	Down	32	500	h	h	1	394	Index
+216	female	Down	33	500	l	l	1	412	Little Finger
+216	female	Down	34	1100	k	k	1	650	Ring Finger
+216	female	Down	35	650	b	b	1	444	Thumb
+216	female	Down	36	950	j	j	1	308	Middle Finger
+216	female	Down	37	500	b	b	1	503	Thumb
+216	female	Down	38	1100	k	k	1	423	Ring Finger
+216	female	Down	39	1100	j	j	1	391	Middle Finger
+216	female	Down	40	950	l	l	1	388	Little Finger
+216	female	Down	41	950	b	b	1	458	Thumb
+216	female	Down	42	500	k	k	1	538	Ring Finger
+216	female	Down	43	800	l	l	1	367	Little Finger
+216	female	Down	44	650	h	h	1	562	Index
+216	female	Down	45	800	b	b	1	474	Thumb
+216	female	Down	46	500	l	l	1	420	Little Finger
+216	female	Down	47	650	h	h	1	442	Index
+216	female	Down	48	950	j	j	1	530	Middle Finger
+216	female	Down	49	800	k	k	1	594	Ring Finger
+216	female	Down	50	800	b	b	1	615	Thumb
+216	female	Up	1	800	k	k	1	607	Ring Finger
+216	female	Up	2	650	h	h	1	409	Index
+216	female	Up	3	500	l	l	1	406	Little Finger
+216	female	Up	4	800	b	b	1	397	Thumb
+216	female	Up	5	800	l	l	1	430	Little Finger
+216	female	Up	6	500	k	k	1	473	Ring Finger
+216	female	Up	7	950	l	l	1	462	Little Finger
+216	female	Up	8	1100	j	j	1	446	Middle Finger
+216	female	Up	9	1100	k	k	1	683	Ring Finger
+216	female	Up	10	500	b	b	1	409	Thumb
+216	female	Up	11	500	l	l	1	446	Little Finger
+216	female	Up	12	650	h	h	1	417	Index
+216	female	Up	13	800	l	l	1	574	Little Finger
+216	female	Up	14	500	k	k	1	470	Ring Finger
+216	female	Up	15	950	b	b	1	411	Thumb
+216	female	Up	16	950	l	l	1	443	Little Finger
+216	female	Up	17	1100	j	j	1	489	Middle Finger
+216	female	Up	18	500	b	l	0	390	Thumb
+216	female	Up	19	500	h	h	1	521	Index
+216	female	Up	20	950	k	k	1	577	Ring Finger
+216	female	Up	21	500	j	j	1	593	Middle Finger
+216	female	Up	22	1100	h	h	1	539	Index
+216	female	Up	23	800	j	j	1	558	Middle Finger
+216	female	Up	24	1100	b	b	1	457	Thumb
+216	female	Up	25	800	j	j	1	510	Middle Finger
+216	female	Up	26	1100	l	l	1	473	Little Finger
+216	female	Up	27	950	h	h	1	534	Index
+216	female	Up	28	500	j	j	1	422	Middle Finger
+216	female	Up	29	650	l	l	1	475	Little Finger
+216	female	Up	30	800	h	h	1	417	Index
+216	female	Up	31	650	j	j	1	430	Middle Finger
+216	female	Up	32	650	l	l	1	510	Little Finger
+216	female	Up	33	650	j	j	1	486	Middle Finger
+216	female	Up	34	950	h	h	1	470	Index
+216	female	Up	35	650	k	k	1	662	Ring Finger
+216	female	Up	36	1100	b	b	1	502	Thumb
+216	female	Up	37	650	k	k	1	563	Ring Finger
+216	female	Up	38	1100	h	h	1	537	Index
+216	female	Up	39	950	b	b	1	403	Thumb
+216	female	Up	40	1100	l	l	1	425	Little Finger
+216	female	Up	41	800	h	h	1	350	Index
+216	female	Up	42	950	k	k	1	595	Ring Finger
+216	female	Up	43	950	j	j	1	409	Middle Finger
+216	female	Up	44	650	b	b	1	443	Thumb
+216	female	Up	45	1100	k	k	1	625	Ring Finger
+216	female	Up	46	800	b	b	1	419	Thumb
+216	female	Up	47	800	k	k	1	505	Ring Finger
+216	female	Up	48	500	h	h	1	521	Index
+216	female	Up	49	950	j	j	1	353	Middle Finger
+216	female	Up	50	650	b	b	1	385	Thumb
+217	female	Down	1	950	k	k	1	481	Ring Finger
+217	female	Down	2	800	h	h	1	342	Index
+217	female	Down	3	500	k	k	1	398	Ring Finger
+217	female	Down	4	1100	l	l	1	449	Little Finger
+217	female	Down	5	950	b	b	1	585	Thumb
+217	female	Down	6	500	h	h	1	424	Index
+217	female	Down	7	650	b	b	1	437	Thumb
+217	female	Down	8	1100	h	h	1	376	Index
+217	female	Down	9	1100	j	j	1	296	Middle Finger
+217	female	Down	10	500	b	b	1	416	Thumb
+217	female	Down	11	800	l	l	1	389	Little Finger
+217	female	Down	12	650	k	k	1	333	Ring Finger
+217	female	Down	13	950	l	j	0	269	Little Finger
+217	female	Down	14	1100	b	b	1	448	Thumb
+217	female	Down	15	650	k	k	1	594	Ring Finger
+217	female	Down	16	950	h	h	1	336	Index
+217	female	Down	17	650	j	j	1	461	Middle Finger
+217	female	Down	18	650	l	l	1	386	Little Finger
+217	female	Down	19	650	j	j	1	296	Middle Finger
+217	female	Down	20	800	h	h	1	397	Index
+217	female	Down	21	650	l	l	1	341	Little Finger
+217	female	Down	22	500	j	j	1	461	Middle Finger
+217	female	Down	23	950	h	j	0	264	Index
+217	female	Down	24	1100	l	l	1	432	Little Finger
+217	female	Down	25	800	j	h	0	365	Middle Finger
+217	female	Down	26	1100	b	b	1	442	Thumb
+217	female	Down	27	800	k	k	1	997	Ring Finger
+217	female	Down	28	800	j	j	1	461	Middle Finger
+217	female	Down	29	1100	h	h	1	317	Index
+217	female	Down	30	500	j	h	0	416	Middle Finger
+217	female	Down	31	950	k	j	0	330	Ring Finger
+217	female	Down	32	500	h	h	1	416	Index
+217	female	Down	33	500	l	k	0	408	Little Finger
+217	female	Down	34	1100	k	j	0	869	Ring Finger
+217	female	Down	35	650	b	b	1	477	Thumb
+217	female	Down	36	950	j	j	1	474	Middle Finger
+217	female	Down	37	500	b	b	1	373	Thumb
+217	female	Down	38	1100	k	j	0	282	Ring Finger
+217	female	Down	39	1100	j	j	1	504	Middle Finger
+217	female	Down	40	950	l	k	0	306	Little Finger
+217	female	Down	41	950	b	b	1	341	Thumb
+217	female	Down	42	500	k	k	1	421	Ring Finger
+217	female	Down	43	800	l	l	1	392	Little Finger
+217	female	Down	44	650	h	h	1	432	Index
+217	female	Down	45	800	b	b	1	344	Thumb
+217	female	Down	46	500	l	l	1	352	Little Finger
+217	female	Down	47	650	h	b	0	392	Index
+217	female	Down	48	950	j	j	1	365	Middle Finger
+217	female	Down	49	800	k	k	1	920	Ring Finger
+217	female	Down	50	800	b	b	1	440	Thumb
+217	female	Up	1	800	k	j	0	588	Ring Finger
+217	female	Up	2	650	h	h	1	444	Index
+217	female	Up	3	500	l	l	1	665	Little Finger
+217	female	Up	4	800	b	b	1	460	Thumb
+217	female	Up	5	800	l	l	1	639	Little Finger
+217	female	Up	6	500	k	k	1	449	Ring Finger
+217	female	Up	7	950	l	l	1	825	Little Finger
+217	female	Up	8	1100	j	j	1	745	Middle Finger
+217	female	Up	9	1100	k	k	1	553	Ring Finger
+217	female	Up	10	500	b	b	1	428	Thumb
+217	female	Up	11	500	l	l	1	575	Little Finger
+217	female	Up	12	650	h	b	0	492	Index
+217	female	Up	13	800	l	l	1	444	Little Finger
+217	female	Up	14	500	k	k	1	457	Ring Finger
+217	female	Up	15	950	b	b	1	444	Thumb
+217	female	Up	16	950	l	l	1	900	Little Finger
+217	female	Up	17	1100	j	j	1	692	Middle Finger
+217	female	Up	18	500	b	b	1	449	Thumb
+217	female	Up	19	500	h	h	1	503	Index
+217	female	Up	20	950	k	k	1	833	Ring Finger
+217	female	Up	21	500	j	j	1	676	Middle Finger
+217	female	Up	22	1100	h	h	1	423	Index
+217	female	Up	23	800	j	k	0	404	Middle Finger
+217	female	Up	24	1100	b	b	1	337	Thumb
+217	female	Up	25	800	j	j	1	748	Middle Finger
+217	female	Up	26	1100	l	l	1	471	Little Finger
+217	female	Up	27	950	h	h	1	564	Index
+217	female	Up	28	500	j	j	1	1113	Middle Finger
+217	female	Up	29	650	l	l	1	577	Little Finger
+217	female	Up	30	800	h	h	1	444	Index
+217	female	Up	31	650	j	j	1	567	Middle Finger
+217	female	Up	32	650	l	l	1	521	Little Finger
+217	female	Up	33	650	j	k	0	612	Middle Finger
+217	female	Up	34	950	h	h	1	508	Index
+217	female	Up	35	650	k	k	1	452	Ring Finger
+217	female	Up	36	1100	b	b	1	489	Thumb
+217	female	Up	37	650	k	k	1	436	Ring Finger
+217	female	Up	38	1100	h	h	1	767	Index
+217	female	Up	39	950	b	b	1	431	Thumb
+217	female	Up	40	1100	l	l	1	577	Little Finger
+217	female	Up	41	800	h	h	1	439	Index
+217	female	Up	42	950	k	k	1	580	Ring Finger
+217	female	Up	43	950	j	j	1	591	Middle Finger
+217	female	Up	44	650	b	b	1	399	Thumb
+217	female	Up	45	1100	k	k	1	498	Ring Finger
+217	female	Up	46	800	b	b	1	319	Thumb
+217	female	Up	47	800	k	k	1	375	Ring Finger
+217	female	Up	48	500	h	h	1	431	Index
+217	female	Up	49	950	j	j	1	660	Middle Finger
+217	female	Up	50	650	b	b	1	322	Thumb
+218	Male	Down	1	950	k	k	1	510	Ring Finger
+218	Male	Down	2	800	h	h	1	475	Index
+218	Male	Down	3	500	k	k	1	494	Ring Finger
+218	Male	Down	4	1100	l	l	1	443	Little Finger
+218	Male	Down	5	950	b	b	1	411	Thumb
+218	Male	Down	6	500	h	h	1	472	Index
+218	Male	Down	7	650	b	b	1	408	Thumb
+218	Male	Down	8	1100	h	h	1	438	Index
+218	Male	Down	9	1100	j	j	1	456	Middle Finger
+218	Male	Down	10	500	b	b	1	464	Thumb
+218	Male	Down	11	800	l	l	1	571	Little Finger
+218	Male	Down	12	650	k	k	1	398	Ring Finger
+218	Male	Down	13	950	l	l	1	459	Little Finger
+218	Male	Down	14	1100	b	b	1	403	Thumb
+218	Male	Down	15	650	k	k	1	510	Ring Finger
+218	Male	Down	16	950	h	h	1	427	Index
+218	Male	Down	17	650	j	j	1	424	Middle Finger
+218	Male	Down	18	650	l	l	1	542	Little Finger
+218	Male	Down	19	650	j	j	1	467	Middle Finger
+218	Male	Down	20	800	h	h	1	478	Index
+218	Male	Down	21	650	l	l	1	589	Little Finger
+218	Male	Down	22	500	j	j	1	527	Middle Finger
+218	Male	Down	23	950	h	h	1	471	Index
+218	Male	Down	24	1100	l	l	1	506	Little Finger
+218	Male	Down	25	800	j	j	1	461	Middle Finger
+218	Male	Down	26	1100	b	b	1	421	Thumb
+218	Male	Down	27	800	k	k	1	482	Ring Finger
+218	Male	Down	28	800	j	j	1	333	Middle Finger
+218	Male	Down	29	1100	h	h	1	386	Index
+218	Male	Down	30	500	j	j	1	522	Middle Finger
+218	Male	Down	31	950	k	k	1	346	Ring Finger
+218	Male	Down	32	500	h	h	1	594	Index
+218	Male	Down	33	500	l	l	1	549	Little Finger
+218	Male	Down	34	1100	k	k	1	559	Ring Finger
+218	Male	Down	35	650	b	b	1	447	Thumb
+218	Male	Down	36	950	j	j	1	423	Middle Finger
+218	Male	Down	37	500	b	b	1	479	Thumb
+218	Male	Down	38	1100	k	k	1	490	Ring Finger
+218	Male	Down	39	1100	j	j	1	399	Middle Finger
+218	Male	Down	40	950	l	l	1	389	Little Finger
+218	Male	Down	41	950	b	b	1	418	Thumb
+218	Male	Down	42	500	k	k	1	610	Ring Finger
+218	Male	Down	43	800	l	l	1	493	Little Finger
+218	Male	Down	44	650	h	h	1	512	Index
+218	Male	Down	45	800	b	b	1	437	Thumb
+218	Male	Down	46	500	l	l	1	448	Little Finger
+218	Male	Down	47	650	h	h	1	514	Index
+218	Male	Down	48	950	j	j	1	448	Middle Finger
+218	Male	Down	49	800	k	k	1	344	Ring Finger
+218	Male	Down	50	800	b	b	1	357	Thumb
+218	Male	Up	1	800	k	k	1	379	Ring Finger
+218	Male	Up	2	650	h	h	1	512	Index
+218	Male	Up	3	500	l	l	1	507	Little Finger
+218	Male	Up	4	800	b	b	1	331	Thumb
+218	Male	Up	5	800	l	l	1	451	Little Finger
+218	Male	Up	6	500	k	k	1	576	Ring Finger
+218	Male	Up	7	950	l	l	1	459	Little Finger
+218	Male	Up	8	1100	j	j	1	347	Middle Finger
+218	Male	Up	9	1100	k	k	1	510	Ring Finger
+218	Male	Up	10	500	b	b	1	440	Thumb
+218	Male	Up	11	500	l	l	1	494	Little Finger
+218	Male	Up	12	650	h	h	1	371	Index
+218	Male	Up	13	800	l	l	1	470	Little Finger
+218	Male	Up	14	500	k	k	1	472	Ring Finger
+218	Male	Up	15	950	b	b	1	406	Thumb
+218	Male	Up	16	950	l	l	1	454	Little Finger
+218	Male	Up	17	1100	j	j	1	446	Middle Finger
+218	Male	Up	18	500	b	b	1	459	Thumb
+218	Male	Up	19	500	h	h	1	347	Index
+218	Male	Up	20	950	k	k	1	377	Ring Finger
+218	Male	Up	21	500	j	j	1	401	Middle Finger
+218	Male	Up	22	1100	h	h	1	342	Index
+218	Male	Up	23	800	j	j	1	401	Middle Finger
+218	Male	Up	24	1100	b	b	1	358	Thumb
+218	Male	Up	25	800	j	j	1	390	Middle Finger
+218	Male	Up	26	1100	l	l	1	473	Little Finger
+218	Male	Up	27	950	h	h	1	382	Index
+218	Male	Up	28	500	j	j	1	462	Middle Finger
+218	Male	Up	29	650	l	l	1	579	Little Finger
+218	Male	Up	30	800	h	h	1	390	Index
+218	Male	Up	31	650	j	j	1	358	Middle Finger
+218	Male	Up	32	650	l	l	1	470	Little Finger
+218	Male	Up	33	650	j	j	1	374	Middle Finger
+218	Male	Up	34	950	h	h	1	422	Index
+218	Male	Up	35	650	k	k	1	467	Ring Finger
+218	Male	Up	36	1100	b	b	1	347	Thumb
+218	Male	Up	37	650	k	k	1	464	Ring Finger
+218	Male	Up	38	1100	h	h	1	400	Index
+218	Male	Up	39	950	b	b	1	381	Thumb
+218	Male	Up	40	1100	l	l	1	397	Little Finger
+218	Male	Up	41	800	h	h	1	397	Index
+218	Male	Up	42	950	k	k	1	394	Ring Finger
+218	Male	Up	43	950	j	j	1	352	Middle Finger
+218	Male	Up	44	650	b	b	1	424	Thumb
+218	Male	Up	45	1100	k	k	1	456	Ring Finger
+218	Male	Up	46	800	b	b	1	405	Thumb
+218	Male	Up	47	800	k	k	1	453	Ring Finger
+218	Male	Up	48	500	h	h	1	402	Index
+218	Male	Up	49	950	j	j	1	306	Middle Finger
+218	Male	Up	50	650	b	b	1	384	Thumb
+219	Male	Down	1	950	k	k	1	517	Ring Finger
+219	Male	Down	2	800	h	h	1	365	Index
+219	Male	Down	3	500	k	k	1	442	Ring Finger
+219	Male	Down	4	1100	l	l	1	408	Little Finger
+219	Male	Down	5	950	b	b	1	536	Thumb
+219	Male	Down	6	500	h	h	1	512	Index
+219	Male	Down	7	650	b	b	1	592	Thumb
+219	Male	Down	8	1100	h	h	1	450	Index
+219	Male	Down	9	1100	j	j	1	368	Middle Finger
+219	Male	Down	10	500	b	b	1	621	Thumb
+219	Male	Down	11	800	l	l	1	576	Little Finger
+219	Male	Down	12	650	k	k	1	717	Ring Finger
+219	Male	Down	13	950	l	l	1	723	Little Finger
+219	Male	Down	14	1100	b	b	1	568	Thumb
+219	Male	Down	15	650	k	k	1	507	Ring Finger
+219	Male	Down	16	950	h	h	1	533	Index
+219	Male	Down	17	650	j	j	1	552	Middle Finger
+219	Male	Down	18	650	l	l	1	368	Little Finger
+219	Male	Down	19	650	j	j	1	467	Middle Finger
+219	Male	Down	20	800	h	h	1	600	Index
+219	Male	Down	21	650	l	l	1	472	Little Finger
+219	Male	Down	22	500	j	j	1	395	Middle Finger
+219	Male	Down	23	950	h	h	1	296	Index
+219	Male	Down	24	1100	l	l	1	496	Little Finger
+219	Male	Down	25	800	j	j	1	483	Middle Finger
+219	Male	Down	26	1100	b	b	1	624	Thumb
+219	Male	Down	27	800	k	k	1	523	Ring Finger
+219	Male	Down	28	800	j	j	1	323	Middle Finger
+219	Male	Down	29	1100	h	h	1	448	Index
+219	Male	Down	30	500	j	j	1	533	Middle Finger
+219	Male	Down	31	950	k	k	1	525	Ring Finger
+219	Male	Down	32	500	h	h	1	403	Index
+219	Male	Down	33	500	l	l	1	432	Little Finger
+219	Male	Down	34	1100	k	k	1	579	Ring Finger
+219	Male	Down	35	650	b	b	1	576	Thumb
+219	Male	Down	36	950	j	j	1	363	Middle Finger
+219	Male	Down	37	500	b	b	1	680	Thumb
+219	Male	Down	38	1100	k	k	1	443	Ring Finger
+219	Male	Down	39	1100	j	j	1	568	Middle Finger
+219	Male	Down	40	950	l	l	1	608	Little Finger
+219	Male	Down	41	950	b	b	1	672	Thumb
+219	Male	Down	42	500	k	k	1	587	Ring Finger
+219	Male	Down	43	800	l	l	1	520	Little Finger
+219	Male	Down	44	650	h	h	1	479	Index
+219	Male	Down	45	800	b	b	1	503	Thumb
+219	Male	Down	46	500	l	l	1	463	Little Finger
+219	Male	Down	47	650	h	h	1	428	Index
+219	Male	Down	48	950	j	j	1	330	Middle Finger
+219	Male	Down	49	800	k	k	1	458	Ring Finger
+219	Male	Down	50	800	b	b	1	543	Thumb
+219	Male	Up	1	800	k	k	1	971	Ring Finger
+219	Male	Up	2	650	h	h	1	581	Index
+219	Male	Up	3	500	l	l	1	589	Little Finger
+219	Male	Up	4	800	b	b	1	571	Thumb
+219	Male	Up	5	800	l	l	1	611	Little Finger
+219	Male	Up	6	500	k	k	1	568	Ring Finger
+219	Male	Up	7	950	l	l	1	512	Little Finger
+219	Male	Up	8	1100	j	j	1	579	Middle Finger
+219	Male	Up	9	1100	k	k	1	603	Ring Finger
+219	Male	Up	10	500	b	b	1	552	Thumb
+219	Male	Up	11	500	l	l	1	467	Little Finger
+219	Male	Up	12	650	h	h	1	427	Index
+219	Male	Up	13	800	l	l	1	427	Little Finger
+219	Male	Up	14	500	k	k	1	694	Ring Finger
+219	Male	Up	15	950	b	b	1	384	Thumb
+219	Male	Up	16	950	l	l	1	499	Little Finger
+219	Male	Up	17	1100	j	j	1	563	Middle Finger
+219	Male	Up	18	500	b	b	1	736	Thumb
+219	Male	Up	19	500	h	h	1	1472	Index
+219	Male	Up	20	950	k	k	1	494	Ring Finger
+219	Male	Up	21	500	j	j	1	638	Middle Finger
+219	Male	Up	22	1100	h	h	1	440	Index
+219	Male	Up	23	800	j	j	1	590	Middle Finger
+219	Male	Up	24	1100	b	b	1	448	Thumb
+219	Male	Up	25	800	j	j	1	491	Middle Finger
+219	Male	Up	26	1100	l	l	1	1320	Little Finger
+219	Male	Up	27	950	h	h	1	430	Index
+219	Male	Up	28	500	j	j	1	552	Middle Finger
+219	Male	Up	29	650	l	l	1	528	Little Finger
+219	Male	Up	30	800	h	h	1	411	Index
+219	Male	Up	31	650	j	j	1	582	Middle Finger
+219	Male	Up	32	650	l	l	1	1307	Little Finger
+219	Male	Up	33	650	j	j	1	592	Middle Finger
+219	Male	Up	34	950	h	h	1	1830	Index
+219	Male	Up	35	650	k	k	1	550	Ring Finger
+219	Male	Up	36	1100	b	b	1	608	Thumb
+219	Male	Up	37	650	k	k	1	595	Ring Finger
+219	Male	Up	38	1100	h	h	1	510	Index
+219	Male	Up	39	950	b	b	1	595	Thumb
+219	Male	Up	40	1100	l	l	1	502	Little Finger
+219	Male	Up	41	800	h	h	1	523	Index
+219	Male	Up	42	950	k	k	1	547	Ring Finger
+219	Male	Up	43	950	j	j	1	358	Middle Finger
+219	Male	Up	44	650	b	b	1	501	Thumb
+219	Male	Up	45	1100	k	k	1	941	Ring Finger
+219	Male	Up	46	800	b	b	1	546	Thumb
+219	Male	Up	47	800	k	k	1	493	Ring Finger
+219	Male	Up	48	500	h	h	1	546	Index
+219	Male	Up	49	950	j	j	1	485	Middle Finger
+219	Male	Up	50	650	b	b	1	583	Thumb
+220	male	Down	1	950	k	k	1	431	Ring Finger
+220	male	Down	2	800	h	h	1	348	Index
+220	male	Down	3	500	k	k	1	447	Ring Finger
+220	male	Down	4	1100	l	l	1	380	Little Finger
+220	male	Down	5	950	b	b	1	375	Thumb
+220	male	Down	6	500	h	h	1	439	Index
+220	male	Down	7	650	b	b	1	423	Thumb
+220	male	Down	8	1100	h	h	1	391	Index
+220	male	Down	9	1100	j	j	1	337	Middle Finger
+220	male	Down	10	500	b	b	1	465	Thumb
+220	male	Down	11	800	l	l	1	415	Little Finger
+220	male	Down	12	650	k	k	1	396	Ring Finger
+220	male	Down	13	950	l	l	1	368	Little Finger
+220	male	Down	14	1100	b	b	1	366	Thumb
+220	male	Down	15	650	k	k	1	456	Ring Finger
+220	male	Down	16	950	h	h	1	371	Index
+220	male	Down	17	650	j	j	1	334	Middle Finger
+220	male	Down	18	650	l	l	1	283	Little Finger
+220	male	Down	19	650	j	j	1	430	Middle Finger
+220	male	Down	20	800	h	b	0	334	Index
+220	male	Down	21	650	l	l	1	387	Little Finger
+220	male	Down	22	500	j	j	1	422	Middle Finger
+220	male	Down	23	950	h	h	1	448	Index
+220	male	Down	24	1100	l	l	1	374	Little Finger
+220	male	Down	25	800	j	j	1	443	Middle Finger
+220	male	Down	26	1100	b	b	1	385	Thumb
+220	male	Down	27	800	k	k	1	558	Ring Finger
+220	male	Down	28	800	j	j	1	438	Middle Finger
+220	male	Down	29	1100	h	h	1	329	Index
+220	male	Down	30	500	j	j	1	414	Middle Finger
+220	male	Down	31	950	k	j	0	449	Ring Finger
+220	male	Down	32	500	h	h	1	422	Index
+220	male	Down	33	500	l	l	1	462	Little Finger
+220	male	Down	34	1100	k	k	1	374	Ring Finger
+220	male	Down	35	650	b	b	1	915	Thumb
+220	male	Down	36	950	j	j	1	425	Middle Finger
+220	male	Down	37	500	b	b	1	441	Thumb
+220	male	Down	38	1100	k	k	1	438	Ring Finger
+220	male	Down	39	1100	j	j	1	417	Middle Finger
+220	male	Down	40	950	l	l	1	379	Little Finger
+220	male	Down	41	950	b	b	1	430	Thumb
+220	male	Down	42	500	k	k	1	449	Ring Finger
+220	male	Down	43	800	l	l	1	409	Little Finger
+220	male	Down	44	650	h	h	1	379	Index
+220	male	Down	45	800	b	b	1	398	Thumb
+220	male	Down	46	500	l	l	1	425	Little Finger
+220	male	Down	47	650	h	h	1	342	Index
+220	male	Down	48	950	j	j	1	353	Middle Finger
+220	male	Down	49	800	k	k	1	334	Ring Finger
+220	male	Down	50	800	b	b	1	385	Thumb
+220	male	Up	1	800	k	k	1	491	Ring Finger
+220	male	Up	2	650	h	h	1	333	Index
+220	male	Up	3	500	l	l	1	349	Little Finger
+220	male	Up	4	800	b	b	1	371	Thumb
+220	male	Up	5	800	l	l	1	483	Little Finger
+220	male	Up	6	500	k	k	1	432	Ring Finger
+220	male	Up	7	950	l	l	1	389	Little Finger
+220	male	Up	8	1100	j	j	1	416	Middle Finger
+220	male	Up	9	1100	k	k	1	384	Ring Finger
+220	male	Up	10	500	b	b	1	384	Thumb
+220	male	Up	11	500	l	l	1	312	Little Finger
+220	male	Up	12	650	h	h	1	280	Index
+220	male	Up	13	800	l	l	1	659	Little Finger
+220	male	Up	14	500	k	j	0	443	Ring Finger
+220	male	Up	15	950	b	b	1	379	Thumb
+220	male	Up	16	950	l	l	1	293	Little Finger
+220	male	Up	17	1100	j	j	1	485	Middle Finger
+220	male	Up	18	500	b	b	1	379	Thumb
+220	male	Up	19	500	h	h	1	355	Index
+220	male	Up	20	950	k	k	1	376	Ring Finger
+220	male	Up	21	500	j	j	1	416	Middle Finger
+220	male	Up	22	1100	h	h	1	440	Index
+220	male	Up	23	800	j	j	1	411	Middle Finger
+220	male	Up	24	1100	b	b	1	336	Thumb
+220	male	Up	25	800	j	j	1	370	Middle Finger
+220	male	Up	26	1100	l	l	1	360	Little Finger
+220	male	Up	27	950	h	h	1	392	Index
+220	male	Up	28	500	j	j	1	427	Middle Finger
+220	male	Up	29	650	l	l	1	411	Little Finger
+220	male	Up	30	800	h	h	1	330	Index
+220	male	Up	31	650	j	j	1	318	Middle Finger
+220	male	Up	32	650	l	l	1	278	Little Finger
+220	male	Up	33	650	j	j	1	382	Middle Finger
+220	male	Up	34	950	h	h	1	352	Index
+220	male	Up	35	650	k	j	0	336	Ring Finger
+220	male	Up	36	1100	b	b	1	336	Thumb
+220	male	Up	37	650	k	k	1	470	Ring Finger
+220	male	Up	38	1100	h	h	1	376	Index
+220	male	Up	39	950	b	b	1	363	Thumb
+220	male	Up	40	1100	l	l	1	304	Little Finger
+220	male	Up	41	800	h	h	1	283	Index
+220	male	Up	42	950	k	k	1	347	Ring Finger
+220	male	Up	43	950	j	j	1	406	Middle Finger
+220	male	Up	44	650	b	b	1	408	Thumb
+220	male	Up	45	1100	k	k	1	390	Ring Finger
+220	male	Up	46	800	b	b	1	331	Thumb
+220	male	Up	47	800	k	k	1	515	Ring Finger
+220	male	Up	48	500	h	h	1	326	Index
+220	male	Up	49	950	j	j	1	350	Middle Finger
+220	male	Up	50	650	b	b	1	358	Thumb
+221	Male	Down	1	950	k	k	1	484	Ring Finger
+221	Male	Down	2	800	h	h	1	412	Index
+221	Male	Down	3	500	k	l	0	337	Ring Finger
+221	Male	Down	4	1100	l	l	1	377	Little Finger
+221	Male	Down	5	950	b	b	1	324	Thumb
+221	Male	Down	6	500	h	h	1	417	Index
+221	Male	Down	7	650	b	b	1	415	Thumb
+221	Male	Down	8	1100	h	h	1	447	Index
+221	Male	Down	9	1100	j	j	1	428	Middle Finger
+221	Male	Down	10	500	b	b	1	479	Thumb
+221	Male	Down	11	800	l	l	1	540	Little Finger
+221	Male	Down	12	650	k	k	1	593	Ring Finger
+221	Male	Down	13	950	l	l	1	399	Little Finger
+221	Male	Down	14	1100	b	b	1	361	Thumb
+221	Male	Down	15	650	k	k	1	396	Ring Finger
+221	Male	Down	16	950	h	h	1	265	Index
+221	Male	Down	17	650	j	j	1	399	Middle Finger
+221	Male	Down	18	650	l	l	1	327	Little Finger
+221	Male	Down	19	650	j	j	1	361	Middle Finger
+221	Male	Down	20	800	h	b	0	372	Index
+221	Male	Down	21	650	l	l	1	519	Little Finger
+221	Male	Down	22	500	j	j	1	441	Middle Finger
+221	Male	Down	23	950	h	h	1	369	Index
+221	Male	Down	24	1100	l	l	1	343	Little Finger
+221	Male	Down	25	800	j	j	1	444	Middle Finger
+221	Male	Down	26	1100	b	b	1	297	Thumb
+221	Male	Down	27	800	k	j	0	463	Ring Finger
+221	Male	Down	28	800	j	j	1	460	Middle Finger
+221	Male	Down	29	1100	h	h	1	420	Index
+221	Male	Down	30	500	j	j	1	524	Middle Finger
+221	Male	Down	31	950	k	k	1	508	Ring Finger
+221	Male	Down	32	500	h	h	1	423	Index
+221	Male	Down	33	500	l	l	1	343	Little Finger
+221	Male	Down	34	1100	k	k	1	423	Ring Finger
+221	Male	Down	35	650	b	b	1	387	Thumb
+221	Male	Down	36	950	j	j	1	328	Middle Finger
+221	Male	Down	37	500	b	b	1	470	Thumb
+221	Male	Down	38	1100	k	k	1	504	Ring Finger
+221	Male	Down	39	1100	j	j	1	697	Middle Finger
+221	Male	Down	40	950	l	l	1	339	Little Finger
+221	Male	Down	41	950	b	b	1	454	Thumb
+221	Male	Down	42	500	k	k	1	454	Ring Finger
+221	Male	Down	43	800	l	l	1	409	Little Finger
+221	Male	Down	44	650	h	h	1	491	Index
+221	Male	Down	45	800	b	b	1	430	Thumb
+221	Male	Down	46	500	l	l	1	377	Little Finger
+221	Male	Down	47	650	h	h	1	486	Index
+221	Male	Down	48	950	j	j	1	494	Middle Finger
+221	Male	Down	49	800	k	k	1	585	Ring Finger
+221	Male	Down	50	800	b	b	1	454	Thumb
+221	Male	Up	1	800	k	k	1	468	Ring Finger
+221	Male	Up	2	650	h	h	1	372	Index
+221	Male	Up	3	500	l	l	1	361	Little Finger
+221	Male	Up	4	800	b	b	1	316	Thumb
+221	Male	Up	5	800	l	k	0	316	Little Finger
+221	Male	Up	6	500	k	k	1	471	Ring Finger
+221	Male	Up	7	950	l	l	1	380	Little Finger
+221	Male	Up	8	1100	j	j	1	468	Middle Finger
+221	Male	Up	9	1100	k	k	1	471	Ring Finger
+221	Male	Up	10	500	b	b	1	401	Thumb
+221	Male	Up	11	500	l	l	1	831	Little Finger
+221	Male	Up	12	650	h	h	1	383	Index
+221	Male	Up	13	800	l	l	1	372	Little Finger
+221	Male	Up	14	500	k	k	1	457	Ring Finger
+221	Male	Up	15	950	b	b	1	388	Thumb
+221	Male	Up	16	950	l	l	1	385	Little Finger
+221	Male	Up	17	1100	j	j	1	305	Middle Finger
+221	Male	Up	18	500	b	b	1	401	Thumb
+221	Male	Up	19	500	h	h	1	407	Index
+221	Male	Up	20	950	k	k	1	479	Ring Finger
+221	Male	Up	21	500	j	j	1	513	Middle Finger
+221	Male	Up	22	1100	h	h	1	348	Index
+221	Male	Up	23	800	j	j	1	532	Middle Finger
+221	Male	Up	24	1100	b	b	1	313	Thumb
+221	Male	Up	25	800	j	j	1	535	Middle Finger
+221	Male	Up	26	1100	l	l	1	359	Little Finger
+221	Male	Up	27	950	h	h	1	356	Index
+221	Male	Up	28	500	j	j	1	463	Middle Finger
+221	Male	Up	29	650	l	l	1	404	Little Finger
+221	Male	Up	30	800	h	b	0	375	Index
+221	Male	Up	31	650	j	j	1	492	Middle Finger
+221	Male	Up	32	650	l	l	1	431	Little Finger
+221	Male	Up	33	650	j	j	1	535	Middle Finger
+221	Male	Up	34	950	h	h	1	393	Index
+221	Male	Up	35	650	k	k	1	433	Ring Finger
+221	Male	Up	36	1100	b	b	1	412	Thumb
+221	Male	Up	37	650	k	k	1	543	Ring Finger
+221	Male	Up	38	1100	h	h	1	423	Index
+221	Male	Up	39	950	b	b	1	450	Thumb
+221	Male	Up	40	1100	l	l	1	351	Little Finger
+221	Male	Up	41	800	h	h	1	439	Index
+221	Male	Up	42	950	k	k	1	468	Ring Finger
+221	Male	Up	43	950	j	j	1	322	Middle Finger
+221	Male	Up	44	650	b	b	1	468	Thumb
+221	Male	Up	45	1100	k	k	1	447	Ring Finger
+221	Male	Up	46	800	b	b	1	367	Thumb
+221	Male	Up	47	800	k	k	1	455	Ring Finger
+221	Male	Up	48	500	h	h	1	407	Index
+221	Male	Up	49	950	j	j	1	471	Middle Finger
+221	Male	Up	50	650	b	b	1	383	Thumb
+222	Male	Down	1	950	k	k	1	603	Ring Finger
+222	Male	Down	2	800	h	h	1	414	Index
+222	Male	Down	3	500	k	k	1	510	Ring Finger
+222	Male	Down	4	1100	l	l	1	369	Little Finger
+222	Male	Down	5	950	b	b	1	409	Thumb
+222	Male	Down	6	500	h	h	1	502	Index
+222	Male	Down	7	650	b	b	1	451	Thumb
+222	Male	Down	8	1100	h	h	1	393	Index
+222	Male	Down	9	1100	j	j	1	307	Middle Finger
+222	Male	Down	10	500	b	b	1	430	Thumb
+222	Male	Down	11	800	l	l	1	438	Little Finger
+222	Male	Down	12	650	k	k	1	462	Ring Finger
+222	Male	Down	13	950	l	l	1	457	Little Finger
+222	Male	Down	14	1100	b	b	1	393	Thumb
+222	Male	Down	15	650	k	k	1	441	Ring Finger
+222	Male	Down	16	950	h	h	1	329	Index
+222	Male	Down	17	650	j	j	1	332	Middle Finger
+222	Male	Down	18	650	l	l	1	358	Little Finger
+222	Male	Down	19	650	j	j	1	518	Middle Finger
+222	Male	Down	20	800	h	h	1	364	Index
+222	Male	Down	21	650	l	l	1	374	Little Finger
+222	Male	Down	22	500	j	j	1	446	Middle Finger
+222	Male	Down	23	950	h	h	1	342	Index
+222	Male	Down	24	1100	l	l	1	358	Little Finger
+222	Male	Down	25	800	j	j	1	396	Middle Finger
+222	Male	Down	26	1100	b	b	1	366	Thumb
+222	Male	Down	27	800	k	k	1	417	Ring Finger
+222	Male	Down	28	800	j	j	1	340	Middle Finger
+222	Male	Down	29	1100	h	h	1	348	Index
+222	Male	Down	30	500	j	j	1	430	Middle Finger
+222	Male	Down	31	950	k	k	1	324	Ring Finger
+222	Male	Down	32	500	h	h	1	401	Index
+222	Male	Down	33	500	l	l	1	430	Little Finger
+222	Male	Down	34	1100	k	k	1	545	Ring Finger
+222	Male	Down	35	650	b	b	1	406	Thumb
+222	Male	Down	36	950	j	j	1	302	Middle Finger
+222	Male	Down	37	500	b	b	1	470	Thumb
+222	Male	Down	38	1100	k	k	1	505	Ring Finger
+222	Male	Down	39	1100	j	j	1	289	Middle Finger
+222	Male	Down	40	950	l	l	1	417	Little Finger
+222	Male	Down	41	950	b	b	1	460	Thumb
+222	Male	Down	42	500	k	k	1	460	Ring Finger
+222	Male	Down	43	800	l	l	1	425	Little Finger
+222	Male	Down	44	650	h	h	1	382	Index
+222	Male	Down	45	800	b	b	1	417	Thumb
+222	Male	Down	46	500	l	l	1	393	Little Finger
+222	Male	Down	47	650	h	h	1	337	Index
+222	Male	Down	48	950	j	j	1	444	Middle Finger
+222	Male	Down	49	800	k	k	1	484	Ring Finger
+222	Male	Down	50	800	b	b	1	348	Thumb
+222	Male	Up	1	800	k	k	1	539	Ring Finger
+222	Male	Up	2	650	h	h	1	464	Index
+222	Male	Up	3	500	l	l	1	416	Little Finger
+222	Male	Up	4	800	b	b	1	306	Thumb
+222	Male	Up	5	800	l	l	1	862	Little Finger
+222	Male	Up	6	500	k	k	1	494	Ring Finger
+222	Male	Up	7	950	l	l	1	565	Little Finger
+222	Male	Up	8	1100	j	j	1	458	Middle Finger
+222	Male	Up	9	1100	k	k	1	554	Ring Finger
+222	Male	Up	10	500	b	b	1	437	Thumb
+222	Male	Up	11	500	l	l	1	559	Little Finger
+222	Male	Up	12	650	h	h	1	1239	Index
+222	Male	Up	13	800	l	l	1	533	Little Finger
+222	Male	Up	14	500	k	k	1	562	Ring Finger
+222	Male	Up	15	950	b	b	1	402	Thumb
+222	Male	Up	16	950	l	l	1	490	Little Finger
+222	Male	Up	17	1100	j	j	1	359	Middle Finger
+222	Male	Up	18	500	b	b	1	402	Thumb
+222	Male	Up	19	500	h	h	1	391	Index
+222	Male	Up	20	950	k	k	1	549	Ring Finger
+222	Male	Up	21	500	j	j	1	511	Middle Finger
+222	Male	Up	22	1100	h	h	1	426	Index
+222	Male	Up	23	800	j	j	1	389	Middle Finger
+222	Male	Up	24	1100	b	b	1	375	Thumb
+222	Male	Up	25	800	j	j	1	381	Middle Finger
+222	Male	Up	26	1100	l	l	1	373	Little Finger
+222	Male	Up	27	950	h	h	1	357	Index
+222	Male	Up	28	500	j	j	1	415	Middle Finger
+222	Male	Up	29	650	l	l	1	453	Little Finger
+222	Male	Up	30	800	h	h	1	421	Index
+222	Male	Up	31	650	j	j	1	386	Middle Finger
+222	Male	Up	32	650	l	l	1	423	Little Finger
+222	Male	Up	33	650	j	j	1	397	Middle Finger
+222	Male	Up	34	950	h	h	1	466	Index
+222	Male	Up	35	650	k	k	1	440	Ring Finger
+222	Male	Up	36	1100	b	b	1	386	Thumb
+222	Male	Up	37	650	k	k	1	416	Ring Finger
+222	Male	Up	38	1100	h	h	1	304	Index
+222	Male	Up	39	950	b	b	1	418	Thumb
+222	Male	Up	40	1100	l	l	1	562	Little Finger
+222	Male	Up	41	800	h	h	1	493	Index
+222	Male	Up	42	950	k	k	1	429	Ring Finger
+222	Male	Up	43	950	j	j	1	338	Middle Finger
+222	Male	Up	44	650	b	b	1	376	Thumb
+222	Male	Up	45	1100	k	k	1	472	Ring Finger
+222	Male	Up	46	800	b	b	1	413	Thumb
+222	Male	Up	47	800	k	k	1	413	Ring Finger
+222	Male	Up	48	500	h	h	1	370	Index
+222	Male	Up	49	950	j	j	1	370	Middle Finger
+222	Male	Up	50	650	b	b	1	381	Thumb
+224	Male	Down	1	950	k	k	1	486	Ring Finger
+224	Male	Down	2	800	h	b	0	438	Index
+224	Male	Down	3	500	k	k	1	488	Ring Finger
+224	Male	Down	4	1100	l	l	1	438	Little Finger
+224	Male	Down	5	950	b	b	1	475	Thumb
+224	Male	Down	6	500	h	h	1	518	Index
+224	Male	Down	7	650	b	b	1	470	Thumb
+224	Male	Down	8	1100	h	h	1	408	Index
+224	Male	Down	9	1100	j	j	1	374	Middle Finger
+224	Male	Down	10	500	b	b	1	406	Thumb
+224	Male	Down	11	800	l	l	1	310	Little Finger
+224	Male	Down	12	650	k	k	1	534	Ring Finger
+224	Male	Down	13	950	l	l	1	424	Little Finger
+224	Male	Down	14	1100	b	b	1	368	Thumb
+224	Male	Down	15	650	k	k	1	459	Ring Finger
+224	Male	Down	16	950	h	h	1	422	Index
+224	Male	Down	17	650	j	j	1	507	Middle Finger
+224	Male	Down	18	650	l	l	1	299	Little Finger
+224	Male	Down	19	650	j	j	1	393	Middle Finger
+224	Male	Down	20	800	h	h	1	334	Index
+224	Male	Down	21	650	l	l	1	339	Little Finger
+224	Male	Down	22	500	j	j	1	427	Middle Finger
+224	Male	Down	23	950	h	h	1	361	Index
+224	Male	Down	24	1100	l	l	1	318	Little Finger
+224	Male	Down	25	800	j	j	1	438	Middle Finger
+224	Male	Down	26	1100	b	b	1	353	Thumb
+224	Male	Down	27	800	k	k	1	622	Ring Finger
+224	Male	Down	28	800	j	j	1	529	Middle Finger
+224	Male	Down	29	1100	h	h	1	382	Index
+224	Male	Down	30	500	j	j	1	414	Middle Finger
+224	Male	Down	31	950	k	k	1	489	Ring Finger
+224	Male	Down	32	500	h	h	1	374	Index
+224	Male	Down	33	500	l	l	1	350	Little Finger
+224	Male	Down	34	1100	k	k	1	409	Ring Finger
+224	Male	Down	35	650	b	b	1	459	Thumb
+224	Male	Down	36	950	j	j	1	430	Middle Finger
+224	Male	Down	37	500	b	b	1	417	Thumb
+224	Male	Down	38	1100	k	k	1	465	Ring Finger
+224	Male	Down	39	1100	j	j	1	393	Middle Finger
+224	Male	Down	40	950	l	l	1	294	Little Finger
+224	Male	Down	41	950	b	b	1	337	Thumb
+224	Male	Down	42	500	k	j	0	369	Ring Finger
+224	Male	Down	43	800	l	l	1	368	Little Finger
+224	Male	Down	44	650	h	h	1	394	Index
+224	Male	Down	45	800	b	b	1	392	Thumb
+224	Male	Down	46	500	l	l	1	330	Little Finger
+224	Male	Down	47	650	h	h	1	341	Index
+224	Male	Down	48	950	j	j	1	560	Middle Finger
+224	Male	Down	49	800	k	k	1	501	Ring Finger
+224	Male	Down	50	800	b	b	1	408	Thumb
+224	Male	Up	1	950	k	k	1	603	Ring Finger
+224	Male	Up	2	800	h	h	1	414	Index
+224	Male	Up	3	500	k	k	1	510	Ring Finger
+224	Male	Up	4	1100	l	l	1	369	Little Finger
+224	Male	Up	5	950	b	b	1	409	Thumb
+224	Male	Up	6	500	h	h	1	502	Index
+224	Male	Up	7	650	b	b	1	451	Thumb
+224	Male	Up	8	1100	h	h	1	393	Index
+224	Male	Up	9	1100	j	j	1	307	Middle Finger
+224	Male	Up	10	500	b	b	1	430	Thumb
+224	Male	Up	11	800	l	l	1	438	Little Finger
+224	Male	Up	12	650	k	k	1	462	Ring Finger
+224	Male	Up	13	950	l	l	1	457	Little Finger
+224	Male	Up	14	1100	b	b	1	393	Thumb
+224	Male	Up	15	650	k	k	1	441	Ring Finger
+224	Male	Up	16	950	h	h	1	329	Index
+224	Male	Up	17	650	j	j	1	332	Middle Finger
+224	Male	Up	18	650	l	l	1	358	Little Finger
+224	Male	Up	19	650	j	j	1	518	Middle Finger
+224	Male	Up	20	800	h	h	1	364	Index
+224	Male	Up	21	650	l	l	1	375	Little Finger
+224	Male	Up	22	500	j	j	1	446	Middle Finger
+224	Male	Up	23	950	h	h	1	342	Index
+224	Male	Up	24	1100	l	l	1	358	Little Finger
+224	Male	Up	25	800	j	j	1	396	Middle Finger
+224	Male	Up	26	1100	b	b	1	366	Thumb
+224	Male	Up	27	800	k	k	1	416	Ring Finger
+224	Male	Up	28	800	j	j	1	340	Middle Finger
+224	Male	Up	29	1100	h	h	1	348	Index
+224	Male	Up	30	500	j	j	1	430	Middle Finger
+224	Male	Up	31	950	k	k	1	324	Ring Finger
+224	Male	Up	33	500	l	l	1	430	Little Finger
+224	Male	Up	34	1100	k	k	1	545	Ring Finger
+224	Male	Up	35	650	b	b	1	406	Thumb
+224	Male	Up	36	950	j	j	1	305	Middle Finger
+224	Male	Up	37	500	b	b	1	470	Thumb
+224	Male	Up	38	1100	k	k	1	505	Ring Finger
+224	Male	Up	39	1100	j	j	1	289	Middle Finger
+224	Male	Up	40	950	l	l	1	417	Little Finger
+224	Male	Up	42	500	k	k	1	460	Ring Finger
+224	Male	Up	43	800	l	l	1	425	Little Finger
+224	Male	Up	44	650	h	h	1	382	Index
+224	Male	Up	45	800	b	b	1	417	Thumb
+224	Male	Up	46	500	l	l	1	395	Little Finger
+224	Male	Up	47	650	h	h	1	337	Index
+224	Male	Up	48	950	j	j	1	444	Middle Finger
+224	Male	Up	49	800	k	k	1	487	Ring Finger
+224	Male	Up	50	800	b	b	1	348	Thumb

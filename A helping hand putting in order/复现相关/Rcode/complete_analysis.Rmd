@@ -1,0 +1,1000 @@
+---
+title: "完整复现分析: Rinaldi et al. (2016)"
+output: html_document
+---
+
+## 完整复现分析: Rinaldi et al. (2016)
+
+"A helping hand putting in order: Visuomotor routines
+
+organize numerical and non-numerical sequences in space"
+
+Cognition, 152, 40-52
+
+包含: Exp1(阿拉伯数字), Exp2(数字词), Exp3(星期词)
+
+方法: 原文SPSS方法复现 + lmer混合模型(替代方法)
+
+### 0. 包加载与设置
+
+```{r}
+library(tidyverse)
+library(afex)
+library(emmeans)
+library(lme4)
+library(lmerTest)
+library(ggplot2)
+library(patchwork)
+
+data_dir <- "E:/360MoveData/Users/Lenovo/Desktop/Data_A halping hand/Author Data"
+out_dir  <- "E:/360MoveData/Users/Lenovo/Desktop/Data_A halping hand"
+
+```
+
+### 1. 工具函数
+
+```{r}
+
+# 按分组剔除 M +/- 2SD 之外的试次
+remove_outliers <- function(data, ..., rt_col = "RT") {
+  grps <- rlang::quos(...)
+  data %>%
+    group_by(!!!grps) %>%
+    mutate(.lo = mean(.data[[rt_col]], na.rm = TRUE) - 2 * sd(.data[[rt_col]], na.rm = TRUE),
+           .hi = mean(.data[[rt_col]], na.rm = TRUE) + 2 * sd(.data[[rt_col]], na.rm = TRUE)) %>%
+    filter(.data[[rt_col]] >= .lo & .data[[rt_col]] <= .hi) %>%
+    ungroup() %>%
+    select(-starts_with("."))
+}
+
+# 手指映射表
+finger_map <- c("b" = "Thumb", "h" = "Index", "j" = "Middle",
+                "k" = "Ring",  "l" = "Little")
+
+# 计算 finger_D: 各手指RT - 该姿势下最快手指RT
+compute_finger_D <- function(bl) {
+  means <- bl %>%
+    group_by(Subject, Posture, Finger) %>%
+    summarise(m = mean(RT), .groups = "drop")
+  fastest <- means %>%
+    group_by(Subject, Posture) %>%
+    slice_min(m, n = 1, with_ties = FALSE) %>%
+    transmute(Subject, Posture, fast = m)
+  means %>%
+    left_join(fastest, by = c("Subject", "Posture")) %>%
+    mutate(finger_D = m - fast) %>%
+    select(Subject, Posture, Finger, finger_D)
+}
+
+# 计算 posture_D: Supine_mean - Prone_mean
+compute_posture_D <- function(bl) {
+  bl %>%
+    group_by(Subject, Posture, Finger) %>%
+    summarise(pm = mean(RT), .groups = "drop") %>%
+    pivot_wider(names_from = Posture, values_from = pm) %>%
+    mutate(posture_D = Supine - Prone) %>%
+    select(Subject, Finger, posture_D)
+}
+
+# 应用校正: finger_D + posture_D(仅Supine)
+correct_fm <- function(fm_data, finger_D, posture_D, mapping_posture_vec) {
+  fm_data %>%
+    mutate(Finger = recode(CorrectResponse, !!!finger_map),
+           Posture = recode(Mapping, !!!mapping_posture_vec)) %>%
+    left_join(finger_D, by = c("Subject", "Posture", "Finger")) %>%
+    left_join(posture_D, by = c("Subject", "Finger")) %>%
+    mutate(corrected_RT = RT - finger_D,
+           corrected_RT = if_else(Posture == "Supine",
+                                  corrected_RT - posture_D, corrected_RT))
+}
+
+
+```
+
+### 2. 读取数据
+
+```{r}
+
+bl1_raw <- read_tsv(file.path(data_dir, "Baseline_Experiment 1.txt"),
+                     col_types = cols(.default = col_guess()))
+fm1_raw <- read_tsv(file.path(data_dir, "Finger-Mapping_Experiment 1.txt"),
+                     col_types = cols(.default = col_guess()))
+
+bl2_raw <- read_tsv(file.path(data_dir, "Baseline_Experiment 2.txt"),
+                     col_types = cols(.default = col_guess()))
+fm2_raw <- read_tsv(file.path(data_dir, "Finger-Mapping_Experiment 2.txt"),
+                     col_types = cols(.default = col_guess()))
+
+bl3_raw <- read_tsv(file.path(data_dir, "Baseline_Experiment 3.txt"),
+                     col_types = cols(.default = col_guess()))
+fm3_raw <- read_tsv(file.path(data_dir, "Finger-Mapping_Experiment 3.txt"),
+                     col_types = cols(.default = col_guess()))
+
+
+```
+
+## 实验 1: 阿拉伯数字 (1-5)
+
+### 2a. 基线数据处理
+
+```{r}
+bl1 <- bl1_raw %>%
+  filter(Accuracy == 1) %>%
+  mutate(Posture = recode(`Hand Posture`, "Down" = "Prone", "Up" = "Supine"),
+         Finger = factor(recode(`Image`,
+                                "Middle Finger" = "Middle",
+                                "Ring Finger"   = "Ring",
+                                "Little Finger"  = "Little"),
+                         c("Thumb","Index","Middle","Ring","Little"))) %>%
+  remove_outliers(Subject)
+
+## Baseline1_Error Rate
+bl1_raw %>%
+  mutate(Posture = recode(`Hand Posture`, "Down" = "Prone", "Up" = "Supine"),
+         Finger = factor(recode(`Image`,
+                                "Middle Finger" = "Middle",
+                                "Ring Finger"   = "Ring",
+                                "Little Finger"  = "Little"),
+                         c("Thumb","Index","Middle","Ring","Little")),
+         Accuracy = as.numeric(Accuracy)) %>%
+  group_by(Posture) %>%
+  summarise(ErrorRate = 1 - mean(Accuracy, na.rm = TRUE),
+            .groups = "drop") %>%
+  mutate(ErrorRate = sprintf("%.1f%%", 100 * ErrorRate))
+
+cat("--- 基线 2x5 RM-ANOVA (Posture x Finger) ---\n")
+bl1_agg <- bl1 %>%
+  group_by(Subject, Posture, Finger) %>%
+  summarise(RT = mean(RT), .groups = "drop") %>%
+  mutate(Subject = factor(Subject),
+         Posture = factor(Posture, c("Prone","Supine")),
+         Finger  = factor(Finger, c("Thumb","Index","Middle","Ring","Little")))
+bl1_fit <- aov_ez("Subject", "RT", bl1_agg,
+                   within = c("Posture", "Finger"),
+                   anova_table = list(es = "pes"))
+print(bl1_fit)
+
+cat("\n--- Baseline 描述统计 ---\n")
+bl1_posture_desc <- bl1_agg %>%
+  group_by(Posture) %>%
+  summarise(M = mean(RT), SD = sd(RT), .groups = "drop") %>%
+  mutate(across(c(M, SD), ~ sprintf("%.2f", round(., 2))))
+print(bl1_posture_desc)
+
+bl1_finger_desc <- bl1_agg %>%
+  group_by(Finger) %>%
+  summarise(M = mean(RT), SD = sd(RT), .groups = "drop") %>%
+  mutate(across(c(M, SD), ~ sprintf("%.2f", round(., 2))))
+print(bl1_finger_desc)
+
+```
+
+### 2b. 计算校正参数
+
+```{r}
+bl1_correct <- bl1_raw %>%
+  filter(Accuracy == 1) %>%
+  mutate(Posture = recode(`Hand Posture`, "Down" = "Prone", "Up" = "Supine"),
+         Finger = factor(recode(`Image`,
+                                "Middle Finger" = "Middle",
+                                "Ring Finger"   = "Ring",
+                                "Little Finger"  = "Little")))
+bl1_nocut <- bl1_correct %>%
+  remove_outliers(Subject)
+
+fd1 <- compute_finger_D(bl1_nocut)
+pd1 <- compute_posture_D(bl1_nocut)
+
+cat("\n--- finger_D (各姿势各手指平均运动成本) ---\n")
+fd1_sum <- fd1 %>%
+  group_by(Posture, Finger) %>%
+  summarise(M = mean(finger_D), SD = sd(finger_D), .groups = "drop") %>%
+  mutate(across(c(M, SD), ~ sprintf("%.2f", round(., 2))))
+print(fd1_sum)
+
+cat("\n--- posture_D (Supine - Prone 差值) ---\n")
+pd1_sum <- pd1 %>%
+  group_by(Finger) %>%
+  summarise(M = mean(posture_D), SD = sd(posture_D), .groups = "drop") %>%
+  mutate(across(c(M, SD), ~ sprintf("%.2f", round(., 2))))
+print(pd1_sum)
+
+```
+
+### 2c. Finger-Mapping 校正与错误率
+
+```{r}
+mapping_posture1 <- c("A" = "Prone", "B" = "Prone",
+                      "C" = "Supine", "D" = "Supine")
+
+fm1 <- fm1_raw %>%
+  filter(Accuracy == 1) %>%
+  remove_outliers(Subject)
+
+fm1_c <- correct_fm(fm1, fd1, pd1, mapping_posture1)
+
+cat("\n--- 错误率 (各Mapping) ---\n")
+e1 <- fm1_raw %>%
+  group_by(Mapping) %>%
+  summarise(ErrorRate = sprintf("%.1f%%", 100 * mean(Accuracy == 0)), .groups = "drop")
+print(e1)
+
+cat("\n--- 错误率 2x2 RM-ANOVA (arcsin转换) ---\n")
+e1_anova <- fm1_raw %>%
+  group_by(Subject, Mapping) %>%
+  summarise(p = mean(Accuracy == 0), .groups = "drop") %>%
+  mutate(Subject = factor(Subject),
+         Direction = factor(if_else(Mapping %in% c("A","C"), "TL", "LT"), c("TL","LT")),
+         Posture   = factor(if_else(Mapping %in% c("A","B"), "Prone", "Supine"), c("Prone","Supine")),
+         asin_err = asin(sqrt(p)))
+e1_fit <- aov_ez("Subject", "asin_err",
+                  e1_anova %>% group_by(Subject, Direction, Posture) %>%
+                    summarise(asin_err = mean(asin_err), .groups = "drop"),
+                  within = c("Direction", "Posture"),
+                  anova_table = list(es = "pes"))
+print(e1_fit)
+
+```
+
+### 2d. 2x2 RM-ANOVA (Direction x Posture)
+
+```{r}
+exp1 <- fm1_c %>%
+  group_by(Subject, Mapping, Stimulus) %>%
+  summarise(RT = mean(corrected_RT), .groups = "drop") %>%
+  mutate(Direction = factor(if_else(Mapping %in% c("A","C"), "TL", "LT"), c("TL","LT")),
+         Posture   = factor(if_else(Mapping %in% c("A","B"), "Prone", "Supine"), c("Prone","Supine")),
+         Subject   = factor(Subject))
+
+
+cat("\n--- 描述统计: 各条件 ---\n")
+exp1 %>%
+  group_by(Subject) %>%
+  summarise(M = mean(RT), SD = sd(RT), .groups = "drop") %>%
+  mutate(across(c(M, SD), ~ sprintf("%.2f", round(., 2)))) %>% print()
+
+exp1 %>%
+  group_by(Mapping) %>%
+  summarise(M = mean(RT), SD = sd(RT), .groups = "drop") %>%
+  mutate(across(c(M, SD), ~ sprintf("%.2f", round(., 2)))) %>% print()
+
+exp1_desc <- exp1 %>%
+  group_by(Direction, Posture) %>%
+  summarise(M = mean(RT), SD = sd(RT), .groups = "drop") %>%
+  mutate(across(c(M, SD), ~ sprintf("%.2f", round(., 2))))
+print(exp1_desc)
+
+exp1_posture_desc <- exp1 %>%
+  group_by(Posture) %>%
+  summarise(M = mean(RT), SD = sd(RT), .groups = "drop") %>%
+  mutate(across(c(M, SD), ~ sprintf("%.2f", round(., 2)))) %>% print()
+
+exp1_posture_desc <- exp1 %>%
+  group_by(Direction) %>%
+  summarise(M = mean(RT), SD = sd(RT), .groups = "drop") %>%
+  mutate(across(c(M, SD), ~ sprintf("%.2f", round(., 2)))) %>% print()
+
+
+cat("\n--- 2x2 RM-ANOVA: Direction x Posture ---\n")
+a1 <- aov_ez("Subject", "RT",
+              exp1 %>% group_by(Subject, Direction, Posture) %>%
+                summarise(RT = mean(RT), .groups = "drop"),
+              within = c("Direction", "Posture"),
+              anova_table = list(es = "pes"))
+print(a1)
+
+cat("\n--- Post-hoc: Direction 主效应 ---\n")
+print(pairs(emmeans(a1, ~ Direction), adjust = "scheffe"))
+print(pairs(emmeans(a1, ~ Posture), adjust = "scheffe"))
+
+cat("\n--- Post-hoc: 全部4个条件两两比较 (Scheffe) ---\n")
+print(pairs(emmeans(a1, ~ Direction * Posture), adjust = "scheffe"))
+
+```
+
+### 2e. Digit (1-5) ANOVA
+
+```{r}
+cat("\n--- Digit 描述统计 ---\n")
+exp1_stim_desc <- exp1 %>%
+  group_by(Stimulus) %>%
+  summarise(M = mean(RT), SD = sd(RT), .groups = "drop") %>%
+  mutate(across(c(M, SD), ~ sprintf("%.2f", round(., 2))))
+print(exp1_stim_desc)
+
+cat("\n--- Digit One-way RM-ANOVA (1-5) ---\n")
+a1d <- aov_ez("Subject", "RT",
+               exp1 %>% group_by(Subject, Stimulus) %>%
+                 summarise(RT = mean(RT), .groups = "drop") %>%
+                 mutate(Stimulus = factor(Stimulus)),
+               within = "Stimulus",
+               anova_table = list(es = "pes"))
+print(a1d)
+
+cat("\n--- Digit Scheffe Post-hoc ---\n")
+print(pairs(emmeans(a1d, ~ Stimulus), adjust = "scheffe"))
+
+
+```
+
+## 实验 2: 数字词 (English & Hebrew)
+
+### 基线
+
+```{r}
+# Exp2基线文件列名是"Accuacy"（原文笔误），先统一为Accuracy
+bl2 <- bl2_raw %>% 
+  rename(Accuracy = Accuacy) %>%
+  filter(Accuracy == 1) %>%
+  mutate(Posture = recode(`Hand Posture`, "Down" = "Prone", "Up" = "Supine"),
+         Finger = factor(recode(`Image`,
+                                "Middle Finger" = "Middle",
+                                "Ring Finger"   = "Ring",
+                                "Little Finger"  = "Little"),
+                         c("Thumb","Index","Middle","Ring","Little")))
+
+bl2_nocut <- bl2 %>% remove_outliers(Subject)
+
+cat("--- 基线 2x5 RM-ANOVA ---\n")
+bl2_agg <- bl2_nocut %>%
+  group_by(Subject, Posture, Finger) %>%
+  summarise(RT = mean(RT), .groups = "drop") %>%
+  mutate(Subject = factor(Subject),
+         Posture = factor(Posture, c("Prone","Supine")),
+         Finger  = factor(Finger, c("Thumb","Index","Middle","Ring","Little")))
+bl2_fit <- aov_ez("Subject", "RT", bl2_agg,
+                   within = c("Posture", "Finger"),
+                   anova_table = list(es = "pes"))
+print(bl2_fit)
+
+```
+
+### 校正参数
+
+```{r}
+fd2 <- compute_finger_D(bl2_nocut)
+pd2 <- compute_posture_D(bl2_nocut)
+
+```
+
+### FM 校正
+
+```{r}
+mapping_posture2 <- c("A" = "Prone", "B" = "Prone", "C" = "Supine", "D" = "Supine",
+                      "E" = "Prone", "F" = "Prone", "G" = "Supine", "H" = "Supine")
+
+fm2 <- fm2_raw %>%
+  filter(Accuracy == 1) %>%
+  remove_outliers(Subject)
+
+fm2_c <- correct_fm(fm2, fd2, pd2, mapping_posture2)
+
+```
+
+### 错误率
+
+```{r}
+cat("\n--- 错误率 (各Mapping) ---\n")
+e2 <- fm2_raw %>%
+  group_by(Mapping) %>%
+  summarise(ErrorRate = sprintf("%.1f%%", 100 * mean(Accuracy == 0)), .groups = "drop")
+print(e2)
+
+cat("\n--- 错误率 2x2x2 RM-ANOVA ---\n")
+e2_anova <- fm2_raw %>%
+  group_by(Subject, Mapping) %>%
+  summarise(p = mean(Accuracy == 0), .groups = "drop") %>%
+  mutate(Subject   = factor(Subject),
+         Direction = factor(if_else(Mapping %in% c("A","C","E","G"), "TL", "LT"), c("TL","LT")),
+         Posture   = factor(if_else(Mapping %in% c("A","B","E","F"), "Prone", "Supine"), c("Prone","Supine")),
+         Language  = factor(if_else(Mapping %in% c("A","B","C","D"), "English", "Hebrew"), c("English","Hebrew")),
+         asin_err  = asin(sqrt(p)))
+e2_fit <- aov_ez("Subject", "asin_err",
+                  e2_anova %>% group_by(Subject, Direction, Posture, Language) %>%
+                    summarise(asin_err = mean(asin_err), .groups = "drop"),
+                  within = c("Direction", "Posture", "Language"),
+                  anova_table = list(es = "pes"))
+print(e2_fit)
+
+```
+
+### 2x2x2 RM-ANOVA
+
+```{r}
+exp2 <- fm2_c %>%
+  group_by(Subject, Mapping, Stimulus) %>%
+  summarise(RT = mean(corrected_RT), .groups = "drop") %>%
+  mutate(Subject   = factor(Subject),
+         Direction = factor(if_else(Mapping %in% c("A","C","E","G"), "TL", "LT"), c("TL","LT")),
+         Posture   = factor(if_else(Mapping %in% c("A","B","E","F"), "Prone", "Supine"), c("Prone","Supine")),
+         Language  = factor(if_else(Mapping %in% c("A","B","C","D"), "English", "Hebrew"), c("English","Hebrew")),
+         Stimulus  = factor(Stimulus))
+
+
+cat("\n--- 描述统计 ---\n")
+exp2 %>%
+  group_by(Subject) %>%
+  summarise(M = mean(RT), SD = sd(RT), .groups = "drop") %>%
+  mutate(across(c(M, SD), ~ sprintf("%.2f", round(., 2)))) %>% print()
+
+exp2_desc <- exp2 %>%
+  group_by(Direction, Posture, Language, Mapping) %>%
+  summarise(M = mean(RT), SD = sd(RT), .groups = "drop") %>%
+  mutate(across(c(M, SD), ~ sprintf("%.2f", round(., 2))))
+print(exp2_desc)
+
+exp2_language_desc <- exp2 %>%
+  group_by(Language) %>%
+  summarise(M = mean(RT), SD = sd(RT), .groups = "drop") %>%
+  mutate(across(c(M, SD), ~ sprintf("%.2f", round(., 2)))) %>% print()
+
+exp2_direction_desc <- exp2 %>%
+  group_by(Direction) %>%
+  summarise(M = mean(RT), SD = sd(RT), .groups = "drop") %>%
+  mutate(across(c(M, SD), ~ sprintf("%.2f", round(., 2)))) %>% print()
+
+exp2_DP_desc <- exp2 %>%
+  group_by(Direction, Posture) %>%
+  summarise(M = mean(RT), SD = sd(RT), .groups = "drop") %>%
+  mutate(across(c(M, SD), ~ sprintf("%.2f", round(., 2)))) %>% print()
+
+
+cat("\n--- 2x2x2 RM-ANOVA: Direction x Posture x Language ---\n")
+a2 <- aov_ez("Subject", "RT",
+              exp2 %>% group_by(Subject, Direction, Posture, Language) %>%
+                summarise(RT = mean(RT), .groups = "drop"),
+              within = c("Direction", "Posture", "Language"),
+              anova_table = list(es = "pes"))
+print(a2)
+
+cat("\n--- 简单效应: Direction | Posture ---\n")
+print(pairs(emmeans(a2, ~ Direction | Posture), adjust = "scheffe"))
+print(pairs(emmeans(a2, ~ Direction*Posture), adjust = "scheffe"))
+
+```
+
+### 数字词刺激 ANOVA (各语言)
+
+```{r}
+for (lang in c("English", "Hebrew")) {
+  cat(sprintf("\n--- %s: 数字词 One-way RM-ANOVA ---\n", lang))
+  d <- exp2 %>%
+    filter(Language == lang) %>%
+    group_by(Subject, Stimulus) %>%
+    summarise(RT = mean(RT), .groups = "drop") %>%
+    mutate(Stimulus = factor(Stimulus))
+  
+  d_desc <- d %>%
+    group_by(Stimulus) %>%
+    summarise(M = mean(RT), SD = sd(RT), .groups = "drop") %>%
+    mutate(across(c(M, SD), ~ sprintf("%.2f", round(., 2))))
+  print(d_desc)
+  
+  a2d <- aov_ez("Subject", "RT", d, within = "Stimulus",
+                 anova_table = list(es = "pes"))
+  print(a2d)
+  cat("Scheffe Post-hoc:\n")
+  print(pairs(emmeans(a2d, ~ Stimulus), adjust = "scheffe"))
+}
+
+
+```
+
+## 实验 3: 星期词 (English & Hebrew)
+
+### 基线
+
+```{r}
+bl3 <- bl3_raw %>%
+  filter(Accuracy == 1) %>%
+  mutate(Posture = recode(`Hand Posture`, "Down" = "Prone", "Up" = "Supine"),
+         Finger = factor(recode(`Image`,
+                                "Middle Finger" = "Middle",
+                                "Ring Finger"   = "Ring",
+                                "Little Finger"  = "Little"),
+                         c("Thumb","Index","Middle","Ring","Little")))
+
+bl3_nocut <- bl3 %>% remove_outliers(Subject)
+
+cat("--- 基线 2x5 RM-ANOVA ---\n")
+bl3_agg <- bl3_nocut %>%
+  group_by(Subject, Posture, Finger) %>%
+  summarise(RT = mean(RT), .groups = "drop") %>%
+  mutate(Subject = factor(Subject),
+         Posture = factor(Posture, c("Prone","Supine")),
+         Finger  = factor(Finger, c("Thumb","Index","Middle","Ring","Little")))
+bl3_fit <- aov_ez("Subject", "RT", bl3_agg,
+                   within = c("Posture", "Finger"),
+                   anova_table = list(es = "pes"))
+print(bl3_fit)
+
+```
+
+### 校正参数
+
+```{r}
+fd3 <- compute_finger_D(bl3_nocut)
+pd3 <- compute_posture_D(bl3_nocut)
+
+```
+
+### FM 校正
+
+```{r}
+fm3 <- fm3_raw %>%
+  filter(Accuracy == 1) %>%
+  # Exp3 FM已有 CorrectResponse 列，无需转换
+  remove_outliers(Subject)
+
+fm3_c <- correct_fm(fm3, fd3, pd3, mapping_posture2)
+
+```
+
+### 错误率
+
+```{r}
+cat("\n--- 错误率 (各Mapping) ---\n")
+e3 <- fm3_raw %>%
+  group_by(Mapping) %>%
+  summarise(ErrorRate = sprintf("%.1f%%", 100 * mean(Accuracy == 0)), .groups = "drop")
+print(e3)
+
+fm3_raw %>% 
+  mutate(Subject   = factor(Subject),
+         Direction = factor(if_else(Mapping %in% c("A","C","E","G"), "TL", "LT"), c("TL","LT")),
+         Posture   = factor(if_else(Mapping %in% c("A","B","E","F"), "Prone", "Supine"), c("Prone","Supine")),
+         Language  = factor(if_else(Mapping %in% c("A","B","C","D"), "English", "Hebrew"), c("English","Hebrew"))) %>%
+  group_by(Language) %>%
+  summarise(ErrorRate = sprintf("%.1f%%", 100 * mean(Accuracy == 0)), .groups = "drop") %>%
+  print()
+
+fm3_raw %>% 
+  mutate(Subject   = factor(Subject),
+         Direction = factor(if_else(Mapping %in% c("A","C","E","G"), "TL", "LT"), c("TL","LT")),
+         Posture   = factor(if_else(Mapping %in% c("A","B","E","F"), "Prone", "Supine"), c("Prone","Supine")),
+         Language  = factor(if_else(Mapping %in% c("A","B","C","D"), "English", "Hebrew"), c("English","Hebrew"))) %>%
+  group_by(Posture) %>%
+  summarise(ErrorRate = sprintf("%.1f%%", 100 * mean(Accuracy == 0)), .groups = "drop") %>%
+  print()
+
+cat("\n--- 错误率 2x2x2 RM-ANOVA ---\n")
+e3_anova <- fm3_raw %>%
+  group_by(Subject, Mapping) %>%
+  summarise(p = mean(Accuracy == 0), .groups = "drop") %>%
+  mutate(Subject   = factor(Subject),
+         Direction = factor(if_else(Mapping %in% c("A","C","E","G"), "TL", "LT"), c("TL","LT")),
+         Posture   = factor(if_else(Mapping %in% c("A","B","E","F"), "Prone", "Supine"), c("Prone","Supine")),
+         Language  = factor(if_else(Mapping %in% c("A","B","C","D"), "English", "Hebrew"), c("English","Hebrew")),
+         asin_err  = asin(sqrt(p)))
+e3_fit <- aov_ez("Subject", "asin_err",
+                  e3_anova %>% group_by(Subject, Direction, Posture, Language) %>%
+                    summarise(asin_err = mean(asin_err), .groups = "drop"),
+                  within = c("Direction", "Posture", "Language"),
+                  anova_table = list(es = "pes"))
+print(e3_fit)
+
+```
+
+### 2x2x2 RM-ANOVA
+
+```{r}
+exp3 <- fm3_c %>%
+  group_by(Subject, Mapping, Stimulus, CorrectResponse) %>%
+  summarise(RT = mean(corrected_RT), .groups = "drop") %>%
+  mutate(Subject   = factor(Subject),
+         Direction = factor(if_else(Mapping %in% c("A","C","E","G"), "TL", "LT"), c("TL","LT")),
+         Posture   = factor(if_else(Mapping %in% c("A","B","E","F"), "Prone", "Supine"), c("Prone","Supine")),
+         Language  = factor(if_else(Mapping %in% c("A","B","C","D"), "English", "Hebrew"), c("English","Hebrew")),
+         Stimulus  = factor(Stimulus, c("Sunday","Monday","Tuesday","Wednesday","Thursday")))
+
+
+cat("\n--- 描述统计 ---\n")
+exp3 %>%
+  group_by(Subject) %>%
+  summarise(M = mean(RT), SD = sd(RT), .groups = "drop") %>%
+  mutate(across(c(M, SD), ~ sprintf("%.2f", round(., 2)))) %>% print()
+
+exp3_desc <- exp3 %>%
+  group_by(Direction, Posture, Language, Mapping) %>%
+  summarise(M = mean(RT), SD = sd(RT), .groups = "drop") %>%
+  mutate(across(c(M, SD), ~ sprintf("%.2f", round(., 2))))
+print(exp3_desc)
+
+exp3 %>%
+  group_by(Language) %>%
+  summarise(M = mean(RT), SD = sd(RT), .groups = "drop") %>%
+  mutate(across(c(M, SD), ~ sprintf("%.2f", round(., 2)))) %>% 
+  print()
+
+exp3 %>%
+  group_by(Direction) %>%
+  summarise(M = mean(RT), SD = sd(RT), .groups = "drop") %>%
+  mutate(across(c(M, SD), ~ sprintf("%.2f", round(., 2)))) %>% 
+  print()
+
+
+cat("\n--- 2x2x2 RM-ANOVA: Direction x Posture x Language ---\n")
+a3 <- aov_ez("Subject", "RT",
+              exp3 %>% group_by(Subject, Direction, Posture, Language) %>%
+                summarise(RT = mean(RT), .groups = "drop"),
+              within = c("Direction", "Posture", "Language"),
+              anova_table = list(es = "pes"))
+print(a3)
+
+cat("\n--- 三重交互 ---\n")
+print(pairs(emmeans(a3, ~ Posture * Direction | Language), adjust = "scheffe"))
+
+```
+
+### 星期刺激 ANOVA (各语言)
+
+```{r}
+for (lang in c("English", "Hebrew")) {
+  cat(sprintf("\n--- %s: 星期 One-way RM-ANOVA ---\n", lang))
+  d <- exp3 %>%
+    filter(Language == lang) %>%
+    group_by(Subject, Stimulus) %>%
+    summarise(RT = mean(RT), .groups = "drop") %>%
+    mutate(Stimulus = factor(Stimulus, c("Sunday","Monday","Tuesday","Wednesday","Thursday")))
+  
+  d_desc <- d %>%
+    group_by(Stimulus) %>%
+    summarise(M = mean(RT), SD = sd(RT), .groups = "drop") %>%
+    mutate(across(c(M, SD), ~ sprintf("%.2f", round(., 2))))
+  print(d_desc)
+  
+  a3d <- aov_ez("Subject", "RT", d, within = "Stimulus",
+                 anova_table = list(es = "pes"))
+  print(a3d)
+  cat("Scheffe Post-hoc:\n")
+  print(pairs(emmeans(a3d, ~ Stimulus), adjust = "scheffe"))
+}
+
+
+```
+
+## 替代方法: lmer 混合效应模型
+
+### Exp1: lmer
+
+```{r}
+cat("--- Exp1: lmer(Direction * Posture + (1|Subject)) ---\n")
+exp1_long <- fm1_c %>%
+  mutate(Subject   = factor(Subject),
+         Direction = factor(if_else(Mapping %in% c("A","C"), "TL", "LT"), c("TL","LT")),
+         Posture   = factor(if_else(Mapping %in% c("A","B"), "Prone", "Supine"), c("Prone","Supine")))
+
+m1 <- lmer(corrected_RT ~ Direction * Posture + (1|Subject), data = exp1_long)
+print(summary(m1))
+print(anova(m1))
+
+```
+
+### Exp2: lmer
+
+```{r}
+cat("\n--- Exp2: lmer(Direction * Posture * Language + (1|Subject)) ---\n")
+exp2_long <- fm2_c %>%
+  mutate(Subject   = factor(Subject),
+         Direction = factor(if_else(Mapping %in% c("A","C","E","G"), "TL", "LT"), c("TL","LT")),
+         Posture   = factor(if_else(Mapping %in% c("A","B","E","F"), "Prone", "Supine"), c("Prone","Supine")),
+         Language  = factor(if_else(Mapping %in% c("A","B","C","D"), "English", "Hebrew"), c("English","Hebrew")))
+
+m2 <- lmer(corrected_RT ~ Direction * Posture * Language + (1|Subject), data = exp2_long)
+print(summary(m2))
+print(anova(m2))
+
+```
+
+### Exp3: lmer
+
+```{r}
+cat("\n--- Exp3: lmer(Direction * Posture * Language + (1|Subject)) ---\n")
+exp3_long <- fm3_c %>%
+  mutate(Subject   = factor(Subject),
+         Direction = factor(if_else(Mapping %in% c("A","C","E","G"), "TL", "LT"), c("TL","LT")),
+         Posture   = factor(if_else(Mapping %in% c("A","B","E","F"), "Prone", "Supine"), c("Prone","Supine")),
+         Language  = factor(if_else(Mapping %in% c("A","B","C","D"), "English", "Hebrew"), c("English","Hebrew")))
+
+m3 <- lmer(corrected_RT ~ Direction * Posture * Language + (1|Subject), data = exp3_long)
+print(summary(m3))
+print(anova(m3))
+
+
+```
+
+## 画图: APA格式
+
+### APA主题
+
+```{r}
+theme_apa <- function(base_size = 12) {
+  theme_classic(base_size = base_size) +
+    theme(
+      text              = element_text(family = "serif", size = base_size),
+      plot.title        = element_text(hjust = 0.5, size = base_size + 1, face = "bold"),
+      axis.title        = element_text(size = base_size),
+      axis.text         = element_text(size = base_size - 1),
+      legend.title      = element_text(size = base_size),
+      legend.text       = element_text(size = base_size - 1),
+      legend.position   = "bottom",
+      legend.key.width  = unit(0.8, "cm"),
+      strip.background  = element_blank(),
+      strip.text        = element_text(size = base_size, face = "bold"),
+      panel.spacing     = unit(0.4, "cm"),
+      plot.margin       = margin(10, 10, 5, 5)
+    )
+}
+
+fig_dir <- file.path(out_dir, "figures")
+dir.create(fig_dir, showWarnings = FALSE)
+
+
+```
+
+## 实验1 图形
+
+```{r}
+
+cat("\n--- Exp1: 主效应柱状图 ---\n")
+exp1_plot_dat <- exp1 %>%
+  group_by(Direction, Posture, Subject, Mapping) %>%
+  summarise(RT = mean(RT), .groups = "drop") %>%
+  group_by(Direction, Posture, Mapping) %>%
+  summarise(M = mean(RT), SE = sd(RT) / sqrt(n()), .groups = "drop") %>%
+  mutate(Mapping = factor(Mapping),
+         Direction = factor(Direction, c("TL", "LT")),
+         Posture   = factor(Posture, c("Prone", "Supine")))
+
+p1_main <- ggplot(exp1_plot_dat,
+                  aes(x = Mapping,
+                      y = M, fill = Direction)) +
+  geom_col(width = 0.6, color = "black", linewidth = 0.4) +
+  geom_errorbar(aes(ymin = M - SE, ymax = M + SE), width = 0.2, linewidth = 0.4) +
+  scale_fill_manual(values = c("TL" = "white", "LT" = "grey60"),
+                    labels = c("TL (小→大)", "LT (大→小)")) +
+  labs(x = "Mapping", y = "校正后反应时 (ms)",
+       title = "实验1: 阿拉伯数字",
+       fill = "映射方向") +
+  theme_apa() +
+  coord_cartesian(ylim = c(400, 700))
+
+ggsave(file.path(fig_dir, "Exp1_main_effect.png"),
+       p1_main, width = 5, height = 4, dpi = 300)
+print(p1_main)
+
+
+cat("\n--- Exp1: 刺激效应折线图 (Mapping 分面板) ---\n")
+exp1_stim_plot <- exp1 %>%
+  group_by(Stimulus, Mapping, Subject) %>%
+  summarise(RT = mean(RT), .groups = "drop") %>%
+  group_by(Stimulus, Mapping) %>%
+  summarise(M = mean(RT), SE = sd(RT) / sqrt(n()), .groups = "drop") %>%
+  mutate(Panel = recode(Mapping,
+    "A" = "A (TL+Prone)",  "B" = "B (LT+Prone)",
+    "C" = "C (TL+Supine)", "D" = "D (LT+Supine)"),
+    Panel = factor(Panel, c("A (TL+Prone)","B (LT+Prone)",
+                            "C (TL+Supine)","D (LT+Supine)")))
+
+ylim1 <- range(exp1_stim_plot$M - exp1_stim_plot$SE,
+               exp1_stim_plot$M + exp1_stim_plot$SE, na.rm = TRUE) + c(-10, 10)
+
+p1_stim <- ggplot(exp1_stim_plot,
+                  aes(x = Stimulus, y = M, group = 1)) +
+  geom_line(linewidth = 0.5, color = "black") +
+  geom_point(size = 2.5, color = "black") +
+  geom_errorbar(aes(ymin = M - SE, ymax = M + SE),
+                width = 0.3, linewidth = 0.4, color = "black") +
+  scale_x_continuous(breaks = 1:5, labels = as.character(1:5)) +
+  facet_wrap(~ Panel, ncol = 4) +
+  coord_cartesian(ylim = ylim1) +
+  labs(x = "数字刺激", y = "校正后反应时 (ms)",
+       title = "实验1: 数字效应") +
+  theme_apa() +
+  theme(strip.text = element_text(size = 9),
+        axis.text.x = element_text(angle = 45, hjust = 1))
+
+ggsave(file.path(fig_dir, "Exp1_stimulus.png"),
+       p1_stim, width = 10, height = 3.5, dpi = 300)
+print(p1_stim)
+
+
+```
+
+## 实验2 图形
+
+```{r}
+
+cat("\n--- Exp2: Mapping 柱状图 (Language 分面板) ---\n")
+exp2_plot_dat <- exp2 %>%
+  group_by(Mapping, Posture, Direction, Language, Subject) %>%
+  summarise(RT = mean(RT), .groups = "drop") %>%
+  group_by(Mapping, Posture, Direction, Language) %>%
+  summarise(M = mean(RT), SE = sd(RT) / sqrt(n()), .groups = "drop") %>%
+  mutate(Language = factor(Language, c("English", "Hebrew")),
+         Condition = factor(paste0(Direction, "+", Posture),
+                            c("TL+Prone", "LT+Prone", "TL+Supine", "LT+Supine")))
+
+p2_main <- ggplot(exp2_plot_dat,
+                  aes(x = Mapping, y = M,
+                      fill = Condition)) +
+  geom_col(position = position_dodge(0.7), width = 0.55,
+           color = "black", linewidth = 0.4) +
+  geom_errorbar(aes(ymin = M - SE, ymax = M + SE),
+                position = position_dodge(0.7), width = 0.15, linewidth = 0.4) +
+  facet_wrap(~ Language, ncol = 2, scales = "free_x") +
+  scale_fill_manual(values = c("TL+Prone" = "white",
+                                "LT+Prone" = "grey60",
+                                "TL+Supine" = "grey85",
+                                "LT+Supine" = "grey30")) +
+  labs(x = "Mapping", y = "校正后反应时 (ms)",
+       title = "实验2: 数字词",
+       fill = "条件") +
+  theme_apa() +
+  coord_cartesian(ylim = c(500, 700))
+
+ggsave(file.path(fig_dir, "Exp2_main_effect.png"),
+       p2_main, width = 7, height = 4, dpi = 300)
+print(p2_main)
+
+
+cat("\n--- Exp2: 刺激效应折线图 (Language × Mapping 分面板) ---\n")
+exp2_stim_plot <- exp2 %>%
+  group_by(Stimulus, Language, Mapping, Subject) %>%
+  summarise(RT = mean(RT), .groups = "drop") %>%
+  group_by(Stimulus, Language, Mapping) %>%
+  summarise(M = mean(RT), SE = sd(RT) / sqrt(n()), .groups = "drop") %>%
+  mutate(Language = factor(Language, c("English", "Hebrew")),
+         Panel = case_when(
+           Mapping == "A" ~ "A (TL+Prone)",   Mapping == "B" ~ "B (LT+Prone)",
+           Mapping == "C" ~ "C (TL+Supine)",  Mapping == "D" ~ "D (LT+Supine)",
+           Mapping == "E" ~ "E (TL+Prone)",   Mapping == "F" ~ "F (LT+Prone)",
+           Mapping == "G" ~ "G (TL+Supine)",  Mapping == "H" ~ "H (LT+Supine)"),
+         Panel = factor(Panel,
+           c("A (TL+Prone)","B (LT+Prone)","C (TL+Supine)","D (LT+Supine)",
+             "E (TL+Prone)","F (LT+Prone)","G (TL+Supine)","H (LT+Supine)")))
+
+ylim2 <- range(exp2_stim_plot$M - exp2_stim_plot$SE,
+               exp2_stim_plot$M + exp2_stim_plot$SE, na.rm = TRUE) + c(-10, 10)
+
+p2_en <- exp2_stim_plot %>%
+  filter(Language == "English") %>%
+  ggplot(aes(x = Stimulus, y = M, group = 1)) +
+  geom_line(linewidth = 0.5, color = "black") +
+  geom_point(size = 2.5, color = "black") +
+  geom_errorbar(aes(ymin = M - SE, ymax = M + SE),
+                width = 0.3, linewidth = 0.4, color = "black") +
+  facet_wrap(~ Panel, ncol = 4) +
+  coord_cartesian(ylim = ylim2) +
+  labs(subtitle = "English", x = NULL, y = "校正后反应时 (ms)") +
+  theme_apa() +
+  theme(strip.text = element_text(size = 9),
+        plot.subtitle = element_text(hjust = 0.5, face = "bold", size = 11),
+        axis.text.x = element_blank())
+
+p2_he <- exp2_stim_plot %>%
+  filter(Language == "Hebrew") %>%
+  ggplot(aes(x = Stimulus, y = M, group = 1)) +
+  geom_line(linewidth = 0.5, color = "black") +
+  geom_point(size = 2.5, color = "black") +
+  geom_errorbar(aes(ymin = M - SE, ymax = M + SE),
+                width = 0.3, linewidth = 0.4, color = "black") +
+  facet_wrap(~ Panel, ncol = 4) +
+  coord_cartesian(ylim = ylim2) +
+  labs(subtitle = "Hebrew", x = "数字词刺激", y = "校正后反应时 (ms)") +
+  theme_apa() +
+  theme(strip.text = element_text(size = 9),
+        plot.subtitle = element_text(hjust = 0.5, face = "bold", size = 11),
+        axis.text.x = element_text(angle = 45, hjust = 1))
+
+p2_stim <- (p2_en / p2_he) +
+  plot_annotation(title = "实验2: 数字词效应") &
+  theme(plot.title = element_text(hjust = 0.5, face = "bold", size = 13))
+
+ggsave(file.path(fig_dir, "Exp2_stimulus.png"),
+       p2_stim, width = 10, height = 5.5, dpi = 300)
+print(p2_stim)
+
+
+```
+
+## 实验3 图形
+
+```{r}
+
+cat("\n--- Exp3: Mapping 柱状图 (Language 分面板) ---\n")
+exp3_plot_dat <- exp3 %>%
+  group_by(Mapping, Posture, Direction, Language, Subject) %>%
+  summarise(RT = mean(RT), .groups = "drop") %>%
+  group_by(Mapping, Posture, Direction, Language) %>%
+  summarise(M = mean(RT), SE = sd(RT) / sqrt(n()), .groups = "drop") %>%
+  mutate(Language = factor(Language, c("English", "Hebrew")),
+         Condition = factor(paste0(Direction, "+", Posture),
+                            c("TL+Prone", "LT+Prone", "TL+Supine", "LT+Supine")))
+
+p3_main <- ggplot(exp3_plot_dat,
+                  aes(x = Mapping, y = M,
+                      fill = Condition)) +
+  geom_col(position = position_dodge(0.7), width = 0.55,
+           color = "black", linewidth = 0.4) +
+  geom_errorbar(aes(ymin = M - SE, ymax = M + SE),
+                position = position_dodge(0.7), width = 0.15, linewidth = 0.4) +
+  facet_wrap(~ Language, ncol = 2, scales = "free_x") +
+  scale_fill_manual(values = c("TL+Prone" = "white",
+                                "LT+Prone" = "grey60",
+                                "TL+Supine" = "grey85",
+                                "LT+Supine" = "grey30")) +
+  labs(x = "Mapping", y = "校正后反应时 (ms)",
+       title = "实验3: 星期词",
+       fill = "条件") +
+  theme_apa() +
+  coord_cartesian(ylim = c(480, 720))
+
+ggsave(file.path(fig_dir, "Exp3_main_effect.png"),
+       p3_main, width = 7, height = 4, dpi = 300)
+print(p3_main)
+
+
+cat("\n--- Exp3: 刺激效应折线图 (Language × Mapping 分面板) ---\n")
+exp3_stim_plot <- exp3 %>%
+  mutate(Language  = factor(Language, c("English", "Hebrew")),
+         Stimulus  = factor(Stimulus,
+                            c("Sunday","Monday","Tuesday","Wednesday","Thursday"))) %>%
+  group_by(Stimulus, Language, Mapping, Subject) %>%
+  summarise(RT = mean(RT), .groups = "drop") %>%
+  group_by(Stimulus, Language, Mapping) %>%
+  summarise(M = mean(RT), SE = sd(RT) / sqrt(n()), .groups = "drop") %>%
+  mutate(Panel = case_when(
+    Mapping == "A" ~ "A (TL+Prone)",   Mapping == "B" ~ "B (LT+Prone)",
+    Mapping == "C" ~ "C (TL+Supine)",  Mapping == "D" ~ "D (LT+Supine)",
+    Mapping == "E" ~ "E (TL+Prone)",   Mapping == "F" ~ "F (LT+Prone)",
+    Mapping == "G" ~ "G (TL+Supine)",  Mapping == "H" ~ "H (LT+Supine)"),
+    Panel = factor(Panel,
+      c("A (TL+Prone)","B (LT+Prone)","C (TL+Supine)","D (LT+Supine)",
+        "E (TL+Prone)","F (LT+Prone)","G (TL+Supine)","H (LT+Supine)")))
+
+day_labels <- c("Sun", "Mon", "Tue", "Wed", "Thu")
+ylim3 <- range(exp3_stim_plot$M - exp3_stim_plot$SE,
+               exp3_stim_plot$M + exp3_stim_plot$SE, na.rm = TRUE) + c(-10, 10)
+
+p3_en <- exp3_stim_plot %>%
+  filter(Language == "English") %>%
+  ggplot(aes(x = Stimulus, y = M, group = 1)) +
+  geom_line(linewidth = 0.5, color = "black") +
+  geom_point(size = 2.5, color = "black") +
+  geom_errorbar(aes(ymin = M - SE, ymax = M + SE),
+                width = 0.3, linewidth = 0.4, color = "black") +
+  scale_x_discrete(labels = day_labels) +
+  facet_wrap(~ Panel, ncol = 4) +
+  coord_cartesian(ylim = ylim3) +
+  labs(subtitle = "English", x = NULL, y = "校正后反应时 (ms)") +
+  theme_apa() +
+  theme(strip.text = element_text(size = 9),
+        plot.subtitle = element_text(hjust = 0.5, face = "bold", size = 11),
+        axis.text.x = element_blank())
+
+p3_he <- exp3_stim_plot %>%
+  filter(Language == "Hebrew") %>%
+  ggplot(aes(x = Stimulus, y = M, group = 1)) +
+  geom_line(linewidth = 0.5, color = "black") +
+  geom_point(size = 2.5, color = "black") +
+  geom_errorbar(aes(ymin = M - SE, ymax = M + SE),
+                width = 0.3, linewidth = 0.4, color = "black") +
+  scale_x_discrete(labels = day_labels) +
+  facet_wrap(~ Panel, ncol = 4) +
+  coord_cartesian(ylim = ylim3) +
+  labs(subtitle = "Hebrew", x = "星期刺激", y = "校正后反应时 (ms)") +
+  theme_apa() +
+  theme(strip.text = element_text(size = 9),
+        plot.subtitle = element_text(hjust = 0.5, face = "bold", size = 11),
+        axis.text.x = element_text(angle = 45, hjust = 1))
+
+p3_stim <- (p3_en / p3_he) +
+  plot_annotation(title = "实验3: 星期效应") &
+  theme(plot.title = element_text(hjust = 0.5, face = "bold", size = 13))
+
+ggsave(file.path(fig_dir, "Exp3_stimulus.png"),
+       p3_stim, width = 10, height = 5.5, dpi = 300)
+print(p3_stim)
+
+```

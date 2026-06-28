@@ -1,0 +1,266 @@
+# ============================================================
+# 复现分析: Rinaldi et al. (2016) "A helping hand putting in order"
+# 使用Corrected RTs_Experiment {1,2,3}.txt
+# 直接检验论文数据
+# ============================================================
+
+library(tidyverse)
+library(afex)
+library(emmeans)
+
+data_dir <- "E:/360MoveData/Users/Lenovo/Desktop/Data_A halping hand/Author Data"
+
+# ============================================================
+# 辅助: 读取宽格式校正RT文件, 转长格式, 解析 Mapping + Stimulus
+# ============================================================
+
+read_corrected <- function(file, stim_pattern) {
+  read_tsv(file, locale = locale(decimal_mark = ",")) %>%
+    pivot_longer(-Subject, names_to = "col", values_to = "RT") %>%
+    mutate(
+      Mapping = str_extract(col, "^[A-H]"),
+      Stimulus = str_extract(col, stim_pattern)
+    ) %>%
+    filter(!is.na(Mapping), !is.na(Stimulus)) %>%
+    select(-col)
+}
+
+# ============================================================
+# 实验1: 阿拉伯数字 (1-5)
+# ============================================================
+ref1 <- read_corrected(file.path(data_dir, "Corrected RTs_Experiment 1.txt"),
+                       stim_pattern = "\\d+$")
+
+# 每个 Mapping 平均 5 个 Stimulus -> 4 个条件 A-D
+exp1_map <- ref1 %>%
+  group_by(Subject, Mapping) %>%
+  summarise(RT = mean(RT), .groups = "drop") %>%
+  mutate(
+    Subject = factor(Subject),
+    Direction = factor(if_else(Mapping %in% c("A","C"), "TL", "LT"), c("TL","LT")),
+    Posture   = factor(if_else(Mapping %in% c("A","B"), "Prone", "Supine"), c("Prone","Supine"))
+  )
+
+# 2x2 RM-ANOVA: Direction x Posture(Type III SS)
+a1 <- aov_ez("Subject", "RT", exp1_map,
+             within = c("Direction", "Posture"),
+             anova_table = list(es = "pes"))
+print(a1)
+
+# 描述统计
+# 只有本处 SD 来自原始试次级别，其余均来自聚合后数据
+ref1 %>% mutate(Direction = factor(if_else(Mapping %in% c("A","C"), "TL", "LT"), c("TL","LT"))) %>%
+  group_by(Direction) %>%
+  summarise(M = mean(RT), SD = sd(RT), .groups = "drop") %>%
+  mutate(across(c(M, SD), ~ sprintf("%.2f", round(., 2)))) %>% print()
+
+cat("\n--- Post-hoc (Scheffe) pairwise comparisons ---\n")
+print(pairs(emmeans(a1, ~ Direction * Posture), adjust = "scheffe"))
+print(pairs(emmeans(a1, ~ Direction | Posture), adjust = "scheffe"))
+print(pairs(emmeans(a1, ~ Direction), adjust = "scheffe"))
+
+# One-way on Stimulus (5 digits)
+exp1_stim <- ref1 %>%
+  group_by(Subject, Stimulus) %>%
+  summarise(RT = mean(RT), .groups = "drop") %>%
+  mutate(Subject = factor(Subject), Stimulus = factor(Stimulus))
+
+cat("\n--- One-way RM-ANOVA: Digit (1-5) ---\n")
+exp1_stim %>% group_by(Stimulus) %>%
+  summarise(M = mean(RT), SD = sd(RT), .groups = "drop") %>%
+    mutate(across(c(M, SD), ~ sprintf("%.2f", round(., 2)))) %>% print()
+a1d <- aov_ez("Subject", "RT", exp1_stim,
+              within = "Stimulus", anova_table = list(es = "pes"))
+print(a1d)
+cat("Scheffe post-hoc:\n")
+print(pairs(emmeans(a1d, ~ Stimulus), adjust = "scheffe"))
+
+# ============ 画图: 实验1 ============
+# 方向 x 姿势
+p1 <- exp1_map %>%
+  group_by(Direction, Posture) %>%
+  summarise(M = mean(RT), SE = sd(RT) / sqrt(n()), .groups = "drop") %>%
+  ggplot(aes(Direction, M, fill = Posture)) +
+  geom_col(position = position_dodge(0.9), width = 0.6, alpha = 0.85) +
+  geom_errorbar(aes(ymin = M - SE, ymax = M + SE),
+                position = position_dodge(0.9), width = 0.15, linewidth = 0.8) +
+  geom_jitter(data = exp1_map, aes(Direction, RT, fill = Posture),
+              position = position_jitterdodge(jitter.width = 0.08, dodge.width = 0.9),
+              alpha = 0.25, size = 1.8, shape = 21, color = "grey30") +
+  scale_fill_manual(values = c(Prone = "#E69F00", Supine = "#56B4E9")) +
+  scale_y_continuous(breaks = seq(480, 720, by = 40)) +
+  coord_cartesian(ylim = c(480, 720)) +
+  labs(x = "Direction", y = "Corrected RT (ms)", fill = "Posture",
+       title = "Experiment 1: Direction × Posture") +
+  theme_minimal(base_size = 13)
+print(p1)
+
+# ============================================================
+# 实验2: 数字词 (English & Hebrew)
+# ============================================================
+ref2 <- read_corrected(file.path(data_dir, "Corrected RTs_Experiment 2.txt"),
+                       stim_pattern = "\\d+$")
+
+# 每个 Mapping 平均 5 个 Stimulus -> 8 个条件 A-H
+exp2_map <- ref2 %>%
+  group_by(Subject, Mapping) %>%
+  summarise(RT = mean(RT), .groups = "drop") %>%
+  mutate(
+    Subject   = factor(Subject),
+    Direction = factor(if_else(Mapping %in% c("A","C","E","G"), "TL", "LT"), c("TL","LT")),
+    Posture   = factor(if_else(Mapping %in% c("A","B","E","F"), "Prone", "Supine"), c("Prone","Supine")),
+    Language  = factor(if_else(Mapping %in% c("A","B","C","D"), "English", "Hebrew"), c("English","Hebrew"))
+  )
+
+# 2x2x2 RM-ANOVA: Direction x Posture x Language
+a2 <- aov_ez("Subject", "RT", exp2_map,
+             within = c("Direction", "Posture", "Language"),
+             anova_table = list(es = "pes"))
+print(a2)
+
+# 简单效应
+cat("\n--- Direction x Posture 简单效应 ---\n")
+print(pairs(emmeans(a2, ~ Direction | Posture)))
+print(pairs(emmeans(a2, ~ Posture | Direction)))
+
+cat("\n--- 描述统计 ---\n")
+exp2_map %>% group_by(Direction, Posture, Language, Mapping) %>%
+  summarise(M = mean(RT), SD = sd(RT), .groups = "drop") %>%
+    mutate(across(c(M, SD), ~ sprintf("%.2f", round(., 2)))) %>% print()
+
+exp2_map %>% group_by(Language) %>%
+  summarise(M = mean(RT), SD = sd(RT), .groups = "drop") %>%
+  mutate(across(c(M, SD), ~ sprintf("%.2f", round(., 2)))) %>% print()
+
+## FC_compatible:SD = 82.4(calculate 86.93); non-compatible:SD = 91.9(calculate 94.18)
+exp2_map %>% group_by(Direction) %>%
+  summarise(M = mean(RT), SD = sd(RT), .groups = "drop") %>%
+  mutate(across(c(M, SD), ~ sprintf("%.2f", round(., 2)))) %>% print()
+
+## the typical finger counting mapping = TL, SD不匹配 & p >.05
+exp2_map %>% group_by(Direction, Posture) %>%
+  summarise(M = mean(RT), SD = sd(RT), .groups = "drop") %>%
+  mutate(across(c(M, SD), ~ sprintf("%.2f", round(., 2)))) %>% print()
+print(pairs(emmeans(a2, ~ Posture * Direction)), adjust = "scheffe")
+
+# One-way on Stimulus (5 words) within each Language
+for (lang in c("English", "Hebrew")) {
+  cat(sprintf("\n--- %s: One-way RM-ANOVA on Stimulus ---\n", lang))
+  d <- ref2 %>%
+    mutate(Language = if_else(Mapping %in% c("A","B","C","D"), "English", "Hebrew")) %>%
+    filter(Language == lang) %>%
+    group_by(Subject, Stimulus) %>%
+    summarise(RT = mean(RT), .groups = "drop") %>%
+    mutate(Subject = factor(Subject), Stimulus = factor(Stimulus))
+  
+  d %>% group_by(Stimulus) %>%
+    summarise(M = mean(RT), SD = sd(RT), .groups = "drop") %>%
+    mutate(across(c(M, SD), ~ sprintf("%.2f", round(., 2)))) %>% print()
+  a <- aov_ez("Subject", "RT", d, within = "Stimulus", anova_table = list(es = "pes"))
+  print(a)
+  cat("Scheffe post-hoc:\n")
+  print(pairs(emmeans(a, ~ Stimulus), adjust = "scheffe"))
+}
+
+# ============ 画图: 实验2 ============
+# 方向 x 姿势 x 语言
+p2 <- exp2_map %>%
+  group_by(Direction, Posture, Language) %>%
+  summarise(M = mean(RT), SE = sd(RT) / sqrt(n()), .groups = "drop") %>%
+  ggplot(aes(Direction, M, fill = Posture)) +
+  geom_col(position = position_dodge(0.9), width = 0.6, alpha = 0.85) +
+  geom_errorbar(aes(ymin = M - SE, ymax = M + SE),
+                position = position_dodge(0.9), width = 0.15, linewidth = 0.8) +
+  geom_jitter(data = exp2_map, aes(Direction, RT, fill = Posture),
+              position = position_jitterdodge(jitter.width = 0.08, dodge.width = 0.9),
+              alpha = 0.25, size = 1.8, shape = 21, color = "grey30") +
+  scale_fill_manual(values = c(Prone = "#E69F00", Supine = "#56B4E9")) +
+  facet_wrap(~ Language) +
+  scale_y_continuous(breaks = seq(480, 720, by = 40)) +
+  coord_cartesian(ylim = c(480, 720)) +
+  labs(x = "Direction", y = "Corrected RT (ms)", fill = "Posture",
+       title = "Experiment 2: Number Words") +
+  theme_minimal(base_size = 13)
+print(p2)
+
+# ============================================================
+# 实验3: 星期 (English & Hebrew)
+# ============================================================
+ref3 <- read_corrected(file.path(data_dir, "Corrected RTs_Experiment 3.txt"),
+                       stim_pattern = "(Sunday|Monday|Tuesday|Wednesday|Thursday)")
+
+# 每个 Mapping 平均 5 个 Stimulus -> 8 个条件 A-H
+exp3_map <- ref3 %>%
+  group_by(Subject, Mapping) %>%
+  summarise(RT = mean(RT), .groups = "drop") %>%
+  mutate(
+    Subject   = factor(Subject),
+    Direction = factor(if_else(Mapping %in% c("A","C","E","G"), "TL", "LT"), c("TL","LT")),
+    Posture   = factor(if_else(Mapping %in% c("A","B","E","F"), "Prone", "Supine"), c("Prone","Supine")),
+    Language  = factor(if_else(Mapping %in% c("A","B","C","D"), "English", "Hebrew"), c("English","Hebrew"))
+  )
+
+# 2x2x2 RM-ANOVA: Direction x Posture x Language
+a3 <- aov_ez("Subject", "RT", exp3_map,
+             within = c("Direction", "Posture", "Language"),
+             anova_table = list(es = "pes"))
+print(a3)
+
+# 三重交互简单效应
+cat("\n--- Direction | Posture x Language ---\n")
+print(pairs(emmeans(a3, ~ Posture * Direction | Language)), adjust = "scheffe")
+
+cat("\n--- 描述统计 ---\n")
+exp3_map %>% group_by(Mapping, Direction, Posture, Language) %>%
+  summarise(M = mean(RT), SD = sd(RT), .groups = "drop") %>%
+    mutate(across(c(M, SD), ~ sprintf("%.2f", round(., 2)))) %>% print()
+
+exp3_map %>% group_by(Language) %>%
+  summarise(M = mean(RT), SD = sd(RT), .groups = "drop") %>%
+  mutate(across(c(M, SD), ~ sprintf("%.2f", round(., 2)))) %>% print()
+
+exp3_map %>% group_by(Direction) %>%
+  summarise(M = mean(RT), SD = sd(RT), .groups = "drop") %>%
+  mutate(across(c(M, SD), ~ sprintf("%.2f", round(., 2)))) %>% print()
+
+# One-way on Stimulus (5 days) within each Language
+for (lang in c("English", "Hebrew")) {
+  cat(sprintf("\n--- %s: One-way RM-ANOVA on Stimulus (days) ---\n", lang))
+  d <- ref3 %>%
+    mutate(Language = if_else(Mapping %in% c("A","B","C","D"), "English", "Hebrew")) %>%
+    filter(Language == lang) %>%
+    group_by(Subject, Stimulus) %>%
+    summarise(RT = mean(RT), .groups = "drop") %>%
+    mutate(Subject = factor(Subject),
+           Stimulus = factor(Stimulus, c("Sunday","Monday","Tuesday","Wednesday","Thursday")))
+  
+  d %>% group_by(Stimulus) %>%
+    summarise(M = mean(RT), SD = sd(RT), .groups = "drop") %>%
+    mutate(across(c(M, SD), ~ sprintf("%.2f", round(., 2)))) %>% print()
+  a <- aov_ez("Subject", "RT", d, within = "Stimulus", anova_table = list(es = "pes"))
+  print(a)
+  cat("Scheffe post-hoc:\n")
+  print(pairs(emmeans(a, ~ Stimulus), adjust = "scheffe"))
+}
+
+# ============ 画图: 实验3 ============
+# 方向 x 姿势 x 语言
+p3 <- exp3_map %>%
+  group_by(Direction, Posture, Language) %>%
+  summarise(M = mean(RT), SE = sd(RT) / sqrt(n()), .groups = "drop") %>%
+  ggplot(aes(Direction, M, fill = Posture)) +
+  geom_col(position = position_dodge(0.9), width = 0.6, alpha = 0.85) +
+  geom_errorbar(aes(ymin = M - SE, ymax = M + SE),
+                position = position_dodge(0.9), width = 0.15, linewidth = 0.8) +
+  geom_jitter(data = exp3_map, aes(Direction, RT, fill = Posture),
+              position = position_jitterdodge(jitter.width = 0.08, dodge.width = 0.9),
+              alpha = 0.25, size = 1.8, shape = 21, color = "grey30") +
+  scale_fill_manual(values = c(Prone = "#E69F00", Supine = "#56B4E9")) +
+  facet_wrap(~ Language) +
+  scale_y_continuous(breaks = seq(480, 720, by = 40)) +
+  coord_cartesian(ylim = c(480, 720)) +
+  labs(x = "Direction", y = "Corrected RT (ms)", fill = "Posture",
+       title = "Experiment 3: Days of the Week") +
+  theme_minimal(base_size = 13)
+print(p3)
+

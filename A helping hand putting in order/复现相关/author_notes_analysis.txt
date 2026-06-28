@@ -1,0 +1,7 @@
+Notes from the author (Luca Rinaldi): 
+
+"The database uploaded with our Cognition article is the only raw database we saved; when we re-run the analysis (starting from the raw database uploaded in Cognition), we could replicate the main findings for all experimental tasks, but with different results (i.e., numbers in the statistics).
+
+We are, nevertheless, sure that the corrected RTs reported are the right ones (indeed, with this dataset we could fully reproduce the results) and that some errors must have occurred in the handling of the raw database (i.e., possibly when relabeling conditions and Hebrew terms to English) for its publication in Cognition.
+
+Considering the data analysis, however, a piece of information that is not stated in the article and that may be informative for your attempt is that we adopted a 2SD individual cutoff on RTs for both the motor baseline and experimental tasks."
